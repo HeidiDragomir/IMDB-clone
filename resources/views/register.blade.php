@@ -44,12 +44,6 @@
                                             @enderror
                                         </div>
 
-                                        <!--                                        <div class="form-check d-flex justify-content-center mb-5">
-                                            <label class="form-check-label" for="form2Example3g">
-                                                Forgot your password? <a href="#!" class="fw-bold text-body"><u>Click here</u></a>
-                                            </label>
-                                        </div> -->
-
                                         <div class="d-flex justify-content-center">
                                             <button type="button" class="btn btn btn-outline-success btn-lg">Register</button>
                                         </div>
