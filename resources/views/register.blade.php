@@ -7,44 +7,55 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                                <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Create account</h1>
 
                                 <form method="POST" action="/register">
-                                @csrf
+                                    @csrf
                                     <div class="form-outline mb-4">
-                                        <input type="text" class="form-control form-control-lg" />
                                         <label class="form-label" for="username">Your Username</label>
+                                        <input class="form-control form-control-lg" type="text" name="name" id="name" value="{{ old('name')}}" required />
+                                        @error('name')
+                                        <p class="">{{ $message }}</p>
+                                        @enderror
                                     </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="email" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example3cg">Your Email</label>
-                                    </div>
+                                    <div class="mb-6">
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="email">Your Email</label>
+                                            <input class="form-control form-control-lg" type="email" name="email" id="email" value="{{ old('email') }}" required />
+                                            @error('email')
+                                            <p class="">{{ $message }}</p>
+                                            @enderror
+                                        </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="password" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cg">Password</label>
-                                    </div>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="password">Password</label>
+                                            <input class="form-control form-control-lg" type="password" name="password" id="password" required />
+                                            @error('password')
+                                            <p class="">{{ $message }}</p>
+                                            @enderror
+                                        </div>
 
-                                    <div class="form-outline mb-4">
-                                        <input type="password" class="form-control form-control-lg" />
-                                        <label class="form-label" for="form3Example4cdg">Repeat your password</label>
-                                    </div>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="passwordrepeat">Repeat your password</label>
+                                            <input class="form-control form-control-lg" type="password" id="passwordrepeat" required />
+                                            @error('passwordrepeat')
+                                            <p class="">{{ $message }}</p>
+                                            @enderror
+                                        </div>
 
-                                    <div class="form-check d-flex justify-content-center mb-5">
-                                        <label class="form-check-label" for="form2Example3g">
-                                            Forgot your password? <a href="#!" class="text-body"><u>Terms of service</u></a>
-                                        </label>
-                                    </div>
+                                        <!--                                        <div class="form-check d-flex justify-content-center mb-5">
+                                            <label class="form-check-label" for="form2Example3g">
+                                                Forgot your password? <a href="#!" class="fw-bold text-body"><u>Click here</u></a>
+                                            </label>
+                                        </div> -->
 
-                                    <div class="d-flex justify-content-center">
-                                        <button type="button" class="btn btn btn-outline-success btn-lg">Register</button>
-                                    </div>
+                                        <div class="d-flex justify-content-center">
+                                            <button type="button" class="btn btn btn-outline-success btn-lg">Register</button>
+                                        </div>
 
-                                    <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
-
+                                        <p class="text-center text-muted mt-5 mb-0">Already have an account? <a href="{{url('login')}}" class="fw-bold text-body"><u>Login here</u></a></p>
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -53,11 +64,7 @@
         </div>
     </section>
 
-
-
-
-
-
+    <!-- FORM BEFORE CHANGES  -->
 
 
     <!-- <section class="vh-100">
@@ -137,4 +144,6 @@
                 </div>
             </form>
     </section> -->
+
+
 </x-layout>
