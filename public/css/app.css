@@ -18,3 +18,10 @@
 .greybg {
     background-color: #f1f1f1;
 }
+
+/* single movie */
+
+.fade__in {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(2, 2, 2, 0.75)), url('https://image.tmdb.org/t/p/original/nvxrQQspxmSblCYDtvDAbVFX8Jt.jpg');
+    background-size:cover;
+}
