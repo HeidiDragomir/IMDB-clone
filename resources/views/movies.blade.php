@@ -39,7 +39,77 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+
     <!-- ADD DROPDOWN FOR CATEGORIES AND SEARCH BAR -->
-    <!-- ADD GRID FOR POSTERS -->
+    <div class="container">
+      <div class=" d-flex flex-wrap align-items-center mt-3">
+        <div class="dropdown">
+          <a class="btn btn-dark dropdown-toggle btn-lg px-4 gap-3 m-3" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item" href="#">All</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Drama</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class=" col-md-10">
+          <form class="col-auto">
+            <input type="search" class="form-control col-lg-auto fs-5 pt-2 pb-2" placeholder="Search..." aria-label="Search">
+          </form>
+        </div>
+      </div>
+      <!-- ADD GRID FOR POSTERS -->
+      <div class="container mt-3 d-flex justify-content-between">
+        <p class="fs-3">Featured Movies</p>
+        <div>
+          <button class="btn btn-dark"><</button>
+          <button class="btn btn-dark">></button>
+        </div>
+      </div>
+
+      <div class="grid m-3">
+        <div class="row text-center">
+          <div class="container col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
+            <a class="text-decoration-none" href="#">
+              <div>
+                <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" class="img-fluid rounded" alt="Spider-Man: No Way Home">
+                <p class="fs-4 mb-0 link-dark">Spider-Man: No Way Home</p><p class="link-dark">2021</p>
+              </div>
+            </a>
+          </div>
+          <div class="container col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
+            <a class="text-decoration-none" href="#">
+              <div>
+                <img src="https://image.tmdb.org/t/p/w500/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg" class="img-fluid rounded" alt="Encanto">
+                <p class="fs-4 mb-0 link-dark">Encanto</p><p class="link-dark">2021</p>
+              </div>
+            </a>
+          </div>
+          <div class="container col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
+            <a class="text-decoration-none" href="#">
+              <div>
+                <img src="https://image.tmdb.org/t/p/w500/i0z8g2VRZP3dhVvvSMilbOZMKqR.jpg" class="img-fluid rounded" alt="The Requin">
+                <p class="fs-4 mb-0 link-dark">The Requin</p><p class="link-dark">2022</p>
+              </div>
+            </a>
+          </div>
+          <div class="container col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
+            <div class="content rounded">
+              <a class="text-decoration-none" href="#">
+                <div class="content-overlay"></div>
+                  <div>
+                    <img src="https://image.tmdb.org/t/p/w500/xef9Ht77B2igqZv754HNdW8qZCk.jpg" class="img-fluid rounded" alt="The 355">
+                    <div class="content-details">
+                      <p class="fs-4 mb-0">The 355</p><p>2022</p>
+                    </div>
+                  </div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   
 </x-layout>
