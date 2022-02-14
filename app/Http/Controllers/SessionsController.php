@@ -28,7 +28,10 @@ class SessionsController extends Controller
             session()->regenerate();
 
             //redirect with a success flash message
-            return redirect('/')->with('success', 'You are now logged in!');
+            return redirect('/')->with([
+                'success' => 'You are now logged in!',
+                'color' => 'success'
+            ]);
         }
 
         // auth failed
@@ -40,6 +43,9 @@ class SessionsController extends Controller
     public function destroy()
     {
         auth()->logout();
-        return redirect('/')->with('success', 'You are now logged out!');
+        return redirect('/')->with([
+                'success' => 'You are now logged out!',
+                'color' => 'danger'
+            ]);
     }
 }
