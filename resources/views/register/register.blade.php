@@ -1,6 +1,6 @@
 <x-layout>
 
-    <section class="greybg">
+    <section>
         <div class="pt-5 pb-5">
             <div class="container-xxl">
                 <div class="row d-flex justify-content-center align-items-center h-100">
