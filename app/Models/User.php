@@ -24,10 +24,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ["password", "remember_token"];
 
     /**
      * The attributes that should be cast.
@@ -35,10 +32,12 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        "email_verified_at" => "datetime",
     ];
 
-    public function setPasswordAttribute($password) { // When u set $user->password = 'something' its gonna run this.
-        $this->attributes['password'] = bcrypt($password);
+    public function setPasswordAttribute($password)
+    {
+        // When u set $user->password = 'something' its gonna run this.
+        $this->attributes["password"] = bcrypt($password);
     }
 }

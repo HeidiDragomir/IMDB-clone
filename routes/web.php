@@ -5,7 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use Illuminate\Support\Facades\Route;
 
-/*
+/*  
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -15,11 +15,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get("/", [MovieController::class, "index"]);
+
+Route::get("/", function () {
+    return view("movies");
+});
 
 Route::get("/movie", function () {
     return view("movie");
 });
+
+Route::get("/", [MovieController::class, "index"]);
 
 // middleware = app/http/middleware. If your logged in you are not able to create and store.
 Route::get("/register", [RegisterController::class, "create"])->middleware(

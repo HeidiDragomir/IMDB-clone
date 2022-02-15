@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-    public function index($movies)
+    public function index()
     {
-        dd(Movies::find($movies));
-
-        return view("movies");
+        $movies = Movies::get();
+        dd($movies);
+        return view("movies", ["movies" => $movies]);
     }
 }
