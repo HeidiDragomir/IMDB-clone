@@ -41,10 +41,7 @@
     </div>
 
     <!-- ADD DROPDOWN FOR CATEGORIES AND SEARCH BAR -->
-    <div class="container">
-    
-      
-      
+    <div class="container">      
       <div class=" d-flex flex-wrap align-items-center mt-3">
         <div class="dropdown">
           <a class="btn btn-dark dropdown-toggle btn-lg px-4 gap-3 m-3" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
@@ -56,12 +53,13 @@
             @endforeach
           </ul>
         </div>
-        <div class=" col-md-10">
+       <div class=" col-md-10 ">
           <form class="col-auto">
             <input type="search" class="form-control col-lg-auto fs-5 pt-2 pb-2" placeholder="Search..." aria-label="Search">
           </form>
         </div>
-      </div>
+      </div> 
+
       <!-- ADD GRID FOR POSTERS -->
       <div class="container mt-3 d-flex justify-content-between">
         <p class="fs-3">Featured Movies</p>
