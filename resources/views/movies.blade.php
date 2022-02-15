@@ -41,16 +41,16 @@
     </div>
 
     <!-- ADD DROPDOWN FOR CATEGORIES AND SEARCH BAR -->
-    <div class="container">
-      <div class=" d-flex align-items-center mt-3">
+    <div class="container">      
+      <div class=" d-flex flex-wrap align-items-center mt-3">
         <div class="dropdown">
           <a class="btn btn-dark dropdown-toggle btn-lg px-4 gap-3 m-3" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
           <ul class="dropdown-menu" aria-labelledby="dropdown01">
-              <li><a class="dropdown-item" href="#">All</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Drama</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">All</a></li>
+            <li><hr class="dropdown-divider"></li>
+            @foreach ($movies as $movie)
+            <li><a class="dropdown-item" href="/categories/{{ $movie->id }}">{{ $movie->name }}</a></li>
+            @endforeach
           </ul>
         </div>
        <div class=" col-md-10 ">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('movies');
+}); */
+
+Route::get('/', function (Category $category) {
+    return view('movies', [
+        'movies' => $category::all()
+    ]);
 });
 
 Route::get('/movie', function () {
@@ -39,3 +46,11 @@ Route::post('/sessions', [SessionsController::class, 'store'])->middleware('gues
 
 // middleware = app/http/middleware. If your are a guest you are not able to logout.
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+
+Route::get('/categories/{category}', function (Category $category) {
+    return view('categories', [
+        'movies' => $category->movies
+    ]);
+});
+
+
