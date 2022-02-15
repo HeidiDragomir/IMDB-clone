@@ -42,7 +42,7 @@
 
     <!-- ADD DROPDOWN FOR CATEGORIES AND SEARCH BAR -->
     <div class="container">      
-      <div class=" d-flex flex-wrap align-items-center mt-3">
+      <div class=" d-flex align-items-center mt-3">
         <div class="dropdown">
           <a class="btn btn-dark dropdown-toggle btn-lg px-4 gap-3 m-3" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
           <ul class="dropdown-menu" aria-labelledby="dropdown01">
