@@ -18,13 +18,39 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+        Category::truncate();
+        Movies::truncate();
 
-        $category = Category::create([
+        $action = Category::create([
             'name' => 'action'
         ]);
 
+        $thriller = Category::create([
+            'name' => 'thriller'
+        ]);
+
+        $drama = Category::create([
+            'name' => 'drama'
+        ]);
+
+        $family = Category::create([
+            'name' => 'family'
+        ]);
+
+        $horror = Category::create([
+            'name' => 'horror'
+        ]);
+
+        $romantic = Category::create([
+            'name' => 'romantic'
+        ]);
+
+        $comedy = Category::create([
+            'name' => 'comedy'
+        ]);
+
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'Spider-Man: No Way Home',
             'year' => 2021,
             'body' => 'Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.',
@@ -33,7 +59,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $horror->id,
             'title' => 'The Requin',
             'year' => 2022,
             'body' => 'A couple on a romantic getaway find themselves stranded at sea when a tropical storm sweeps away their villa. In order to survive, they are forced to fight the elements, while sharks circle below.',
@@ -42,7 +68,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $family->id,
             'title' => 'The Ice Age Adventures of Buck Wild',
             'year' => 2022,
             'body' => 'The fearless one-eyed weasel Buck teams up with mischievous possum brothers Crash & Eddie as they head off on a new adventure into Buck\'s home: The Dinosaur World.',
@@ -51,7 +77,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'The 355',
             'year' => 2022,
             'body' => 'A group of top female agents from American, British, Chinese, Columbian and German government agencies are drawn together to try and stop an organization from acquiring a deadly weapon to send the world into chaos.',
@@ -60,7 +86,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $horror->id,
             'title' => 'The Jack in the Box: Awakening',
             'year' => 2022,
             'body' => 'When a vintage Jack-in-the-box is opened by a dying woman, she enters into a deal with the demon within that would see her illness cured in return for helping it claim six innocent victims.',
@@ -69,7 +95,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $family->id,
             'title' => 'Sing 2',
             'year' => 2021,
             'body' => 'Buster and his new cast now have their sights set on debuting a new show at the Crystal Tower Theater in glamorous Redshore City. But with no connections, he and his singers must sneak into the Crystal Entertainment offices, run by the ruthless wolf mogul Jimmy Crystal, where the gang pitches the ridiculous idea of casting the lion rock legend Clay Calloway in their show. Buster must embark on a quest to find the now-isolated Clay and persuade him to return to the stage.',
@@ -78,7 +104,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $romantic->id,
             'title' => 'Through My Window',
             'year' => 2022,
             'body' => 'Raquel\'s longtime crush on her next-door neighbor turns into something more when he starts developing feelings for her, despite his family\'s objections.',
@@ -87,7 +113,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'The Matrix Resurrections',
             'year' => 2021,
             'body' => 'Plagued by strange memories, Neo\'s life takes an unexpected turn when he finds himself back inside the Matrix.',
@@ -96,7 +122,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'Last Man Down',
             'year' => 2021,
             'body' => 'After civilization succumbs to a deadly pandemic and his wife is murdered, a special forces soldier abandons his duty and becomes a hermit in the Nordic wilderness. Years later, a wounded woman appears on his doorstep. She\'s escaped from a lab and her pursuers believe her blood is the key to a worldwide cure. He\'s hesitant to get involved, but all doubts are cast aside when he discovers her pursuer is none other than Commander Stone, the man that murdered his wife some years ago.',
@@ -105,7 +131,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $family->id,
             'title' => 'Tom and Jerry: Cowboy Up!',
             'year' => 2022,
             'body' => 'This time, the rivals team up to help a cowgirl and her brother save their homestead from a greedy land-grabber, and they\'re going to need some help! Jerry\'s three precocious nephews are all ready for action, and Tom is rounding up a posse of prairie dogs. But can a ragtag band of varmints defeat a deceitful desperado determined to deceive a damsel in distress? No matter what happens with Tom and Jerry in the saddle, it\'ll be a rootin\' tootin\' good time!',
@@ -114,7 +140,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $thriller->id,
             'title' => 'Mother/Android',
             'year' => 2021,
             'body' => 'Georgia and her boyfriend Sam go on a treacherous journey to escape their country, which is caught in an unexpected war with artificial intelligence. Days away from the arrival of their first child, the couple must face No Man\'s Land—a stronghold of the android uprising—in hopes of reaching safety before giving birth.',
@@ -123,7 +149,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $drama->id,
             'title' => 'House of Gucci',
             'year' => 2021,
             'body' => 'When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder.',
@@ -132,7 +158,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'Uncharted',
             'year' => 2022,
             'body' => 'A young street-smart, Nathan Drake and his wisecracking partner Victor "Sully" Sullivan embark on a dangerous pursuit of "the greatest treasure never found" while also tracking clues that may lead to Nathan\'s long-lost brother.',
@@ -141,7 +167,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'Mortal Kombat',
             'year' => 2021,
             'body' => 'Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung\'s best warrior, Sub-Zero, seeks out and trains with Earth\'s greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.',
@@ -150,7 +176,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $comedy->id,
             'title' => 'Free Guy',
             'year' => 2021,
             'body' => 'A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.',
@@ -159,7 +185,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $family->id,
             'title' => 'The Boss Baby: Family Business',
             'year' => 2021,
             'body' => 'The Templeton brothers — Tim and his Boss Baby little bro Ted — have become adults and drifted away from each other. But a new boss baby with a cutting-edge approach and a can-do attitude is about to bring them together again … and inspire a new family business.',
@@ -168,7 +194,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'Fortress',
             'year' => 2021,
             'body' => 'The story revolves around a top-secret resort for retired U.S. intelligence officers. A group of criminals led by Balzary breach the compound, hellbent on revenge on Robert, forcing the retired officer and his son to save the day.',
@@ -177,7 +203,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $horror->id,
             'title' => 'Dark Spell',
             'year' => 2021,
             'body' => 'Terror strikes when a heartbroken woman uses black magic to get her husband back.',
@@ -186,7 +212,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $drama->id,
             'title' => 'Finch',
             'year' => 2021,
             'body' => 'On a post-apocalyptic Earth, a robot, built to protect the life of his dying creator\'s beloved dog, learns about life, love, friendship, and what it means to be human.',
@@ -195,7 +221,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Movies::create([
-            'category_id' => $category->id,
+            'category_id' => $action->id,
             'title' => 'The Last Warrior: Root of Evil',
             'year' => 2021,
             'body' => 'Peace and tranquility have set in Belogorie. The evil was defeated and Ivan is now enjoying his well-deserved fame. He is surrounded by his family, friends and small wonders from the modern world that help him lead a comfortable life. Luckily, he has his Magic Sword to cut a gap between the worlds to get some supplies quite regularly. But when an ancient evil rises and the existence of the magic world is put to danger, Ivan has to team up with his old friends and his new rivals. They will set out on a long journey beyond the known world to find a way to defeat the enemies and to return peace to Belogorie.',
