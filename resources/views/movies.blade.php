@@ -70,15 +70,15 @@
       <div class="container mt-4">
         <div class="row text-center">
           @foreach ($movies as $movie)
-          <div class="col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
-            <a class="text-decoration-none" href="#">
-              <div>
-                <img src="{{ $movie->photo_poster }}" class="img-fluid rounded" alt="{{ $movie->title }}">
-                <p class="fs-4 mb-0 link-dark">{{ $movie->title }}</p><p class="link-dark">{{ $movie->year }}</p>
-              </div>
-            </a>
-          </div>
-          @endforeach
+            <div class="col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
+              <a class="text-decoration-none" href="{{ $movie->title }}">
+                <div>
+                  <img src="{{ $movie->photo_poster }}" class="img-fluid rounded" alt="{{ $movie->title }}">
+                  <p class="fs-4 mb-0 link-dark">{{ $movie->title }}</p><p class="link-dark">{{ $movie->year }}</p>
+                </div>
+              </a>
+            </div>
+            @endforeach
         </div>
       </div>
     </div>
