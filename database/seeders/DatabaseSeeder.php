@@ -22,31 +22,38 @@ class DatabaseSeeder extends Seeder
         Movies::truncate();
 
         $action = Category::create([
-            'name' => 'action'
+            'name' => 'action',
+            'slug' => 'action'
         ]);
 
         $thriller = Category::create([
-            'name' => 'thriller'
+            'name' => 'thriller',
+            'slug' => 'thriller'
         ]);
 
         $drama = Category::create([
-            'name' => 'drama'
+            'name' => 'drama',
+            'slug' => 'drama'
         ]);
 
         $family = Category::create([
-            'name' => 'family'
+            'name' => 'family',
+            'slug' => 'family'
         ]);
 
         $horror = Category::create([
-            'name' => 'horror'
+            'name' => 'horror',
+            'slug' => 'horror'
         ]);
 
         $romantic = Category::create([
-            'name' => 'romantic'
+            'name' => 'romantic',
+            'slug' => 'romantic'
         ]);
 
         $comedy = Category::create([
-            'name' => 'comedy'
+            'name' => 'comedy',
+            'slug' => 'comedy'
         ]);
 
         Movies::create([
