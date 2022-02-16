@@ -9,7 +9,16 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movies::get();
-        return view("movies", ["movies" => $movies]);
+        return view('movies.index', [
+            'movies' => Movies::latest()->filter(
+                request(['search', 'category'])
+                )->paginate(8)->withQueryString()
+        ]);  
+    }
+
+    public function show(Movies $movie) {
+        return view('movies.movie', [
+        'movie' => $movie
+        ]);
     }
 }
