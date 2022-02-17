@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Movies;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class MovieCommentsController extends Controller
 {
-     public function store(Movies $movie) {
+     public function store(Movie $movie) {
 
         // validation
         request()->validate([

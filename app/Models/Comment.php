@@ -12,7 +12,7 @@ class Comment extends Model
     protected $guarded = [];
 
     public function movie() { // Laravel finds post_id
-        return $this->belongsTo(Movies::class);
+        return $this->belongsTo(Movie::class);
     }
 
     public function user() { 

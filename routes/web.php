@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [MovieController::class, 'index'])->name('home');
 
-Route::get('/movies/{movie:slug}', [MovieController::class, 'movie']);
+Route::get('/movies/{movie:slug}', [MovieController::class, 'show']);
 Route::post('/movies/{movie:slug}/comments', [MovieCommentsController::class, 'store']);
 
 
