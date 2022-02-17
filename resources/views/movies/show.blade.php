@@ -10,9 +10,9 @@
                     <div class="col d-flex flex-column text-white justify-content-center pt-2 pt-lg-0">
                         <h2 class="font-weight-bold">{{$movie->title}} <span class="text-muted small">({{$movie->year}})</span></h2>
                         <ul class="list-inline">
-                            <li class="list-inline-item text-muted">Action</li>
-                            <li class="list-inline-item text-muted">Drama</li>
-                            <li class="list-inline-item text-muted">Science Fiction</li>
+                            <li class="list-inline-item text-muted">{{$movie->category->name}}</li>
+                            <!-- <li class="list-inline-item text-muted">Drama</li>
+                            <li class="list-inline-item text-muted">Science Fiction</li> -->
                         </ul>
                         <h5 class="font-weight-bold pt-3">Overview</h5>
                         <p>{{$movie->body}}</p>
