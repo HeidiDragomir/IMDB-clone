@@ -35,6 +35,10 @@ Route::post("/sessions", [SessionsController::class, "store"])->middleware("gues
 // middleware = app/http/middleware. If your are a guest you are not able to logout.
 Route::post("logout", [SessionsController::class, "destroy"])->middleware("auth");
 
+Route::get('/watchlist', function(){
+    return view('watchlist');
+});
+
 
 
 
