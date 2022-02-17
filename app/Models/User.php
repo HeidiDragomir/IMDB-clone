@@ -40,4 +40,8 @@ class User extends Authenticatable
         // When u set $user->password = 'something' its gonna run this.
         $this->attributes["password"] = bcrypt($password);
     }
+
+    public function movies() {
+        return $this->hasMany(Movies::class);
+    }
 }
