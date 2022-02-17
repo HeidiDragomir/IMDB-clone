@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
-use App\Models\Movies;
+use App\Models\Movie;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         Category::truncate();
-        Movies::truncate();
+        Movie::truncate();
 
         $action = Category::create([
             'name' => 'action',
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'comedy'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'spider-man-no-way-home',
             'title' => 'Spider-Man: No Way Home',
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $horror->id,
             'slug' => 'the-requin',
             'title' => 'The Requin',
@@ -76,7 +76,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/eVSa4TpyXbOdk9fXSD6OcORJGtv.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $family->id,
             'title' => 'The Ice Age Adventures of Buck Wild',
             'slug' => 'the-ice-age-adventures-of-buck-wild',
@@ -86,7 +86,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/eG0oOQVsniPAuecPzDD1B1gnYWy.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'title' => 'The 355',
             'slug' => 'the-355',
@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/8pgKccb5PfE1kWB9qqiXJem83VC.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $horror->id,
             'slug' => 'the-jack-in-the-box-awakening',
             'title' => 'The Jack in the Box: Awakening',
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/xHRabofjmMGoIV3mb6xgy4nwOcS.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $family->id,
             'slug' => 'sing-2',
             'title' => 'Sing 2',
@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/tutaKitJJIaqZPyMz7rxrhb4Yxm.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $romantic->id,
             'slug' => 'through-my-window',
             'title' => 'Through My Window',
@@ -126,7 +126,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/4rsomWxlqnHt3muGYK06auhOib6.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'the-matrix-resurrections',
             'title' => 'The Matrix Resurrections',
@@ -136,7 +136,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'last-man-down',
             'title' => 'Last Man Down',
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/t4To8feUSysyBs4tlBAbXIrKlCv.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $family->id,
             'slug' => 'tom-and-jerry-cowboy-up',
             'title' => 'Tom and Jerry: Cowboy Up!',
@@ -156,7 +156,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/q1NXVYTqSStNQsnKrCvtU6NPzEk.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $thriller->id,
             'slug' => 'mother-android',
             'title' => 'Mother/Android',
@@ -166,7 +166,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/AmLpWYm9R3Ur2FLPgj5CH3wR8wp.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $drama->id,
             'slug' => 'house-of-gucci',
             'title' => 'House of Gucci',
@@ -176,7 +176,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'uncharted',
             'title' => 'Uncharted',
@@ -186,7 +186,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/oUoFM0f4YFW2jw7AymxUXYvGv7S.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'mortal-kombat',
             'title' => 'Mortal Kombat',
@@ -196,7 +196,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $comedy->id,
             'slug' => 'free-guy',
             'title' => 'Free Guy',
@@ -206,7 +206,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $family->id,
             'slug' => 'the-boss-baby-family-business',
             'title' => 'The Boss Baby: Family Business',
@@ -216,7 +216,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/pxOiKwRvNp3zFOiuwpYpzlbmEgC.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'fortress',
             'title' => 'Fortress',
@@ -226,7 +226,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/1BqX34aJS5J8PefVnQSfQIEPfkl.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $horror->id,
             'slug' => 'dark-spell',
             'title' => 'Dark Spell',
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/o2OSpKzXuB1edCDyVC2MXAxXwyJ.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $drama->id,
             'slug' => 'finch',
             'title' => 'Finch',
@@ -246,7 +246,7 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://image.tmdb.org/t/p/original/oE6bhqqVFyIECtBzqIuvh6JdaB5.jpg'
         ]);
 
-        Movies::create([
+        Movie::create([
             'category_id' => $action->id,
             'slug' => 'the-last-warrior-root-of-evil',
             'title' => 'The Last Warrior: Root of Evil',
