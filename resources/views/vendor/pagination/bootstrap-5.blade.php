@@ -4,7 +4,7 @@
             <ul class="pagination">
                 {{-- Previous Page Link --}}
                 @if ($paginator->onFirstPage())
-                    <li class="page-item disabled" aria-disabled="true">
+                    <li class="page-item disabled " aria-disabled="true">
                         <span class="page-link">@lang('pagination.previous')</span>
                     </li>
                 @else
@@ -26,11 +26,11 @@
             </ul>
         </div>
 
-        <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between">
+        <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between ">
             <div>
                 <p class="small text-muted">
                     {!! __('Showing') !!}
-                    <span class="font-medium">{{ $paginator->firstItem() }}</span>
+                    <span class="font-medium ">{{ $paginator->firstItem() }}</span>
                     {!! __('to') !!}
                     <span class="font-medium">{{ $paginator->lastItem() }}</span>
                     {!! __('of') !!}
