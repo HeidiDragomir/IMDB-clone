@@ -11,12 +11,14 @@ class MovieCommentsController extends Controller
 
         // validation
         request()->validate([
-            'body' => 'required'
+            'body' => 'required',
+            'stars' => 'required'
         ]);
 
         // add a comment for the given post
         $movie->comments()->create([
             'user_id' => request()->user()->id,
+            'stars' => request('stars'),
             'body' => request('body')
         ]);
 
