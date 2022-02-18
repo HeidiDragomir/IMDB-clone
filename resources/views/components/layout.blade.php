@@ -27,6 +27,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Movies</a>
                     </li>
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="/watchlist">Watchlist</a>
+                    </li>
+                    @endauth
                 </ul>
 
                 <div class="d-flex">
