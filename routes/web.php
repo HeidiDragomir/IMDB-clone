@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieCommentsController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
