@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+       
 
         Category::truncate();
-        Movie::truncate();
+        Movie::where('id', '>', 0)->delete();
 
         $action = Category::create([
             'name' => 'action',

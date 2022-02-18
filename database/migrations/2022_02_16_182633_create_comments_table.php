@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            /* $table->foreignId('movie_id')->constrained()->cascadeOnDelete(); */ // if post deletes, the comment deletes in db
+            $table->foreignId('movie_id')->constrained()->cascadeOnDelete(); // if post deletes, the comment deletes in db
             $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // if user deletes, the comment deletes in db
             $table->text('body');
             $table->timestamps();
