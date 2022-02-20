@@ -1156,35 +1156,44 @@ class DatabaseSeeder extends Seeder
             'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/wEnMNW8rGX1RVhKY4Lj5sVDYSK8.jpg'
         ]);
                 
-        // Movie::create([
-        //     'category_id' => $action->id,
-        //     'slug' => '',
-        //     'title' => '',
-        //     'year' => ,
-        //     'body' => '',
-        //     'photo_poster' => '',
-        //     'photo_bg' => ''
-        // ]);
+        Movie::create([
+            'category_id' => $thriller->id,
+            'slug' => 'phone-booth',
+            'title' => 'Phone Booth',
+            'year' => 2002,
+            'body' => 'A slick New York publicist who picks up a ringing receiver in a phone booth is told that if he hangs up, he\'ll be killed... and the little red light from a laser rifle sight is proof that the caller isn\'t kidding.',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/2vvF0IyTuzfHy4XK5p1oWJ8NwFz.jpg',
+            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/oBU55I99gZTRYag25Q5eJUKZeG6.jpg'
+        ]);
                 
-        // Movie::create([
-        //     'category_id' => $action->id,
-        //     'slug' => '',
-        //     'title' => '',
-        //     'year' => ,
-        //     'body' => '',
-        //     'photo_poster' => '',
-        //     'photo_bg' => ''
-        // ]);
+        Movie::create([
+            'category_id' => $thriller->id,
+            'slug' => 'taken',
+            'title' => 'Taken',
+            'year' => 2008,
+            'body' => 'While vacationing with a friend in Paris, an American girl is kidnapped by a gang of human traffickers intent on selling her into forced prostitution. Working against the clock, her ex-spy father must pull out all the stops to save her. But with his best years possibly behind him, the job may be more than he can handle.',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/wrJjDB8SSJJKcpXVf4KAxZIHvBZ.jpg',
+            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/9iQWsXwjOMGDvTDdvCnpiyR0UG3.jpg'
+        ]);
                 
-        // Movie::create([
-        //     'category_id' => $action->id,
-        //     'slug' => '',
-        //     'title' => '',
-        //     'year' => ,
-        //     'body' => '',
-        //     'photo_poster' => '',
-        //     'photo_bg' => ''
-        // ]);
+        Movie::create([
+            'category_id' => $thriller->id,
+            'slug' => 'ocean-s-eleven',
+            'title' => 'Ocean\'s Eleven',
+            'year' => 2001,
+            'body' => 'Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny\'s hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash, Danny risks his chances of reconciling with ex-wife, Tess.',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/v5D7K4EHuQHFSjveq8LGxdSfrGS.jpg',
+            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/43BEez1EGdmNpg8rcPUFToujlii.jpg'
+        ]);
     
+               // Movie::create([
+        //     'category_id' => $action->id,
+        //     'slug' => '',
+        //     'title' => '',
+        //     'year' => ,
+        //     'body' => '',
+        //     'photo_poster' => '',
+        //     'photo_bg' => ''
+        // ]);
     }
 }
