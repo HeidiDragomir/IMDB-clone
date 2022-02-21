@@ -1,7 +1,7 @@
 <x-layout>
 
   <!-- CARUSELL -->
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleCaptions" class="carousel slide fade-in" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -84,9 +84,9 @@
     <div class="row text-center mt-4">
       @if($movies->count())
       @foreach ($movies as $movie)
-      <div class="col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3">
+      <div class="col-6 col-md-5 offset-md-1 offset-lg-0 col-lg-3 brightness">
         <a class="text-decoration-none" href="/movies/{{ $movie->slug }}">
-          <div>
+          <div class="fade-in">
             <img src="{{ $movie->photo_poster }}" class="img-fluid rounded" alt="{{ $movie->title }}">
             <p class="fs-4 mb-0 link-dark">{{ $movie->title }}</p>
             <p class="link-dark">{{ $movie->year }}</p>
