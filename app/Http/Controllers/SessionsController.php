@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response as HttpFoundationResponse;
 
 class SessionsController extends Controller
 {
@@ -44,8 +48,21 @@ class SessionsController extends Controller
     {
         auth()->logout();
         return redirect('/')->with([
-                'success' => 'You are now logged out!',
-                'color' => 'danger'
-            ]);
+            'success' => 'You are now logged out!',
+            'color' => 'danger'
+        ]);
+    }
+
+    public function authAdmin()
+    {
+        $admins = ['Filip', 'Cemil', 'Heidi', 'Henrik', 'Ahmet', 'Alexander', 'Sebbe'];
+
+        for ($i = 0; $i <= count($admins); $i++) {
+            if(auth()->user()?->username != $admins[$i]) {
+                abort(RedirectResponse::HTTP_FORBIDDEN);
+            }
+
+            return view('admin.dashboard');
+        }
     }
 }
