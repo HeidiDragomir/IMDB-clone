@@ -23,14 +23,14 @@
             </div>
         </div>
     </div>
-    <div class="container my-4">
+    <div class="container my-5 p-0 d-flex flex-column align-items-center">
 
         @auth
-        <div class="border border-gray-400 p-4 rounded">
+        <div class="border border-gray-400 p-4 rounded" style="min-width: 80%;">
             <form method="POST" action="/movies/{{ $movie->slug }}/comments">
                 @csrf
 
-                <header class="d-flex align-items-center">
+                <header class="d-flex align-items-center ">
                     <!-- items-center -->
                     <img class="rounded-circle" src="https://i.pravatar.cc/60?u={{ auth()->id() }}" alt="profile picture" width="40" height="40">
                     <h4 class="ms-4">Leave a review!</h4>
@@ -49,7 +49,7 @@
                     <textarea class="w-100 text-sm form-control" name="body" rows="5" placeholder="Write your review!" required></textarea>
 
                     @error('body')
-                    <span class="text-xs text-danger">{{ $message }}</span>
+                    <span class="text-danger">{{ $message }}</span>
                     @enderror
 
                 </div>
@@ -60,13 +60,13 @@
             </form>
         </div>
         @else
-        <p>
-            <a href="/register">Register</a> or <a href="/login">log in</a> to leave a comment.
+        <p class="fw-bold">
+            <a class="link-dark" href="/register">Register</a> or <a class="link-dark" href="/login">log in</a> to leave a comment.
         </p>
         @endauth
 
         @foreach ($movie->comments as $comment)
-        <div class="border border-gray-400 p-4 rounded bg-light mt-3">
+        <div class="border border-gray-400 p-4 rounded bg-light mt-3" style="min-width: 80%;">
             <article class="d-flex ">
                 <div class="flex-shrink-0">
                     <img class="rounded-circle" src="https://i.pravatar.cc/60?u={{ $comment->user_id }}" alt="" width="60" height="60">
@@ -75,7 +75,7 @@
                     <header class="mb-2">
                         <h5 class="fw-bold">{{ ucwords($comment->user->username) }}</h5>
                         @if ($comment->stars == 0)
-                        <p class="badge bg-warning text-wrap">
+                        <p class="badge bg-dark text-wrap">
                             Rated: <ion-icon name="star"></ion-icon> No rating
                         </p>
                         @else
@@ -84,7 +84,7 @@
                         </p>
                         @endif
                     </header>
-                    <p class="fs-5">
+                    <p class="fs-6">
                         {{ $comment->body }}
                     </p>
                     <div class="mt-3 pt-3 border-top border-gray-400">
