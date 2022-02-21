@@ -11,7 +11,7 @@ class MovieCommentsController extends Controller
 
         // validation
         request()->validate([
-            'body' => 'required',
+            'body' => ['required', 'min:10', 'max:1000'],
             'stars' => 'required'
         ]);
 
