@@ -7,36 +7,17 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card bg-light" style="border-radius: 15px;">
                             <div class="card-body p-5">
-                                <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Create account</h1>
+                                <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Publish new movie</h1>
 
                                 <form method="POST" action="/admin/dashboard/movies">
                                     @csrf
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="title">Title</label>
 
-                                        <input class="form-control form-control-lg" type="text" name="title" id="title" value="{{ old('title') }}" required />
-                                        @error('title')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
+                                    <x-form-movie.input name="title" />
 
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="title">Slug</label>
+                                    <x-form-movie.input name="slug" />
 
-                                        <input class="form-control form-control-lg" type="text" name="slug" id="slug" value="{{ old('slug') }}" required />
-                                        @error('slug')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
+                                    <x-form-movie.input name="year" />
 
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="year">Year</label>
-
-                                        <input class="form-control form-control-lg" type="text" name="year" id="year" value="{{ old('year') }}" required />
-                                        @error('year')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="category_id">Genre</label>
@@ -60,29 +41,11 @@
                                         @enderror
                                     </div>
 
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="body">Body</label>
-                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required>{{ old('title') }}</textarea>
-                                        @error('body')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
+                                    <x-form-movie.textarea name="body" />
 
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="body">Photo_poster</label>
-                                        <textarea class="form-control form-control-lg" name="photo_poster" id="photo_poster" cols="30" rows="7" required>{{ old('photo_poster') }}</textarea>
-                                        @error('photo_poster')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
+                                    <x-form-movie.textarea name="photo_poster" />
 
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="body">Photo_bg</label>
-                                        <textarea class="form-control form-control-lg" name="photo_bg" id="photo_bg" cols="30" rows="7" required>{{ old('photo_poster') }}</textarea>
-                                        @error('photo_bg')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
+                                    <x-form-movie.textarea name="photo_bg" />
 
 
                                     <div class="d-flex justify-content-center">
