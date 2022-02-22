@@ -40,6 +40,7 @@ Route::get('/watchlist', function(){
     return view('watchlist');
 });
 
+Route::get('/admin/dashboard', [SessionsController::class, "authAdmin"])->middleware('admin');
 
 
 
