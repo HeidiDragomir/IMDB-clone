@@ -25,26 +25,4 @@ class MovieController extends Controller
             'movie' => $movie
         ]);
     }
-
-    public function create()
-    {
-        return view('admin.create');
-    }
-
-    public function store()
-    {
-        $attributes = request()->validate([
-            'title' => 'required',
-            'slug' => 'required|unique:movies',
-            'year' => 'required',
-            'body' => 'required',
-            'photo_poster' => 'required',
-            'photo_bg' => 'required',
-            'category_id' => 'required|exists:categories,id'
-        ]);
-
-        Movie::create($attributes);
-
-        return redirect('/');
-    }
 }
