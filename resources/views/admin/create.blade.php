@@ -14,8 +14,17 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="title">Title</label>
 
-                                        <input class="form-control form-control-lg" type="text" name="title" id="title" required />
+                                        <input class="form-control form-control-lg" type="text" name="title" id="title" value="{{ old('title') }}" required />
                                         @error('title')
+                                        <p class="text-danger"><small>{{ $message }}</small></p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="title">Slug</label>
+
+                                        <input class="form-control form-control-lg" type="text" name="slug" id="slug" value="{{ old('slug') }}" required />
+                                        @error('slug')
                                         <p class="text-danger"><small>{{ $message }}</small></p>
                                         @enderror
                                     </div>
@@ -23,15 +32,15 @@
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="year">Year</label>
 
-                                        <input class="form-control form-control-lg" type="text" name="year" id="year" required />
+                                        <input class="form-control form-control-lg" type="text" name="year" id="year" value="{{ old('year') }}" required />
                                         @error('year')
                                         <p class="text-danger"><small>{{ $message }}</small></p>
                                         @enderror
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="category">Genre</label>
-                                        <select name="category" id="category">
+                                        <label class="form-label" for="category_id">Genre</label>
+                                        <select name="category_id" id="category_id">
                                             @php
 
                                             $categories = \App\Models\Category::all();
@@ -40,21 +49,37 @@
 
                                             @foreach ($categories as $category)
 
-                                            <option value="{{$category->id}}">{{ucwords($category->name)}}</option>
+                                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ ucwords($category->name) }}</option>
 
                                             @endforeach
 
                                         </select>
 
-                                        @error('body')
+                                        @error('category_id')
                                         <p class="text-danger"><small>{{ $message }}</small></p>
                                         @enderror
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="body">Body</label>
-                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required></textarea>
+                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required>{{ old('title') }}</textarea>
                                         @error('body')
+                                        <p class="text-danger"><small>{{ $message }}</small></p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="body">Photo_poster</label>
+                                        <textarea class="form-control form-control-lg" name="photo_poster" id="photo_poster" cols="30" rows="7" required>{{ old('photo_poster') }}</textarea>
+                                        @error('photo_poster')
+                                        <p class="text-danger"><small>{{ $message }}</small></p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="body">Photo_bg</label>
+                                        <textarea class="form-control form-control-lg" name="photo_bg" id="photo_bg" cols="30" rows="7" required>{{ old('photo_poster') }}</textarea>
+                                        @error('photo_bg')
                                         <p class="text-danger"><small>{{ $message }}</small></p>
                                         @enderror
                                     </div>
