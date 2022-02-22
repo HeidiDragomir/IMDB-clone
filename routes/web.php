@@ -47,6 +47,8 @@ Route::get('/admin/dashboard', [SessionsController::class, "authAdmin"])->middle
 
 Route::get('/admin/dashboard/movies/create', [MovieController::class, 'create'])->middleware('admin');
 
+Route::post('/admin/dashboard/movies', [MovieController::class, 'store'])->middleware('admin');
+
 
 
 
