@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Movie;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,55 @@ class DatabaseSeeder extends Seeder
 
         Category::truncate();
         Movie::where('id', '>', 0)->delete();
+
+        User::create([
+            'username' => 'Filip',
+            'name' => 'Filip',
+            'email' => 'filip@test.se',
+            'password' => 'test1234'
+        ]);
+
+        User::create([
+            'username' => 'Cemil',
+            'name' => 'Cemil',
+            'email' => 'cemil@test.se',
+            'password' => 'test1234'
+        ]);
+
+        User::create([
+            'username' => 'Heidi',
+            'name' => 'Heidi',
+            'email' => 'heidi@test.se',
+            'password' => 'test1234'
+        ]);
+
+        User::create([
+            'username' => 'Henrik',
+            'name' => 'Henrik',
+            'email' => 'henrik@test.se',
+            'password' => 'test1234'
+        ]);
+
+        User::create([
+            'username' => 'Ahmet',
+            'name' => 'Ahmet',
+            'email' => 'ahmet@test.se',
+            'password' => 'test1234'
+        ]);
+
+        User::create([
+            'username' => 'Alexander',
+            'name' => 'Alexander',
+            'email' => 'alexander@test.se',
+            'password' => 'test1234'
+        ]);
+
+        User::create([
+            'username' => 'Sebbe',
+            'name' => 'Sebbe',
+            'email' => 'sebbe@test.se',
+            'password' => 'test1234'
+        ]);
 
         $action = Category::create([
             'name' => 'action',
