@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Movie;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule as ValidationRule;
+use Illuminate\Validation\Rule;
+
 
 class AdminMovieController extends Controller
 {
     public function index()
     {
         return view('admin.movies.index', [
-            'movies' => Movie::paginate(500)
+            'movies' => Movie::paginate(500)->reverse()
         ]);
     }
 
@@ -24,12 +25,12 @@ class AdminMovieController extends Controller
     {
         $attributes = request()->validate([
             'title' => 'required',
-            'slug' => 'required|unique:movies',
+            'slug' => ['required', Rule::unique('movies', 'slug')],
             'year' => 'required',
             'body' => 'required',
             'photo_poster' => 'required',
             'photo_bg' => 'required',
-            'category_id' => 'required|exists:categories,id'
+            'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
 
         Movie::create($attributes);
@@ -46,12 +47,12 @@ class AdminMovieController extends Controller
     {
         $attributes = request()->validate([
             'title' => 'required',
-            'slug' => 'required|unique:movies',
+            'slug' => ['required', Rule::unique('movies', 'slug')->ignore($movie)],
             'year' => 'required',
             'body' => 'required',
             'photo_poster' => 'required',
             'photo_bg' => 'required',
-            'category_id' => 'required|exists:categories,id'
+            'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
 
         $movie->update($attributes);
