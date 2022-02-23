@@ -29,7 +29,7 @@
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="/movies/watchlist">Watchlist</a>
+                        <a class="nav-link" href="/movies/watchlist">Watch</a>
                     </li>
                     @endauth
                 </ul>
