@@ -26,7 +26,7 @@
                                     @csrf
                                     @method('PATCH')
 
-                                    <x-form-movie.input name="title" :value="$movie->title" required />
+                                    <x-form-movie.input name="title" :value="old('title', $movie->title)" required />
 
                                     <x-form-movie.input name="slug" :value="old('slug', $movie->slug)" required />
 
