@@ -50,7 +50,7 @@
 
                                     @endforeach
                                 </table>
-
+                                {{ $movies->links() }}
 
                             </div>
                         </div>
