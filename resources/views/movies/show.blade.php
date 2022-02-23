@@ -1,7 +1,7 @@
 <x-layout>
 
     <div>
-        <div class="fade-in" style="background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(2, 2, 2, 0.75)), url({{ $movie->photo_bg }}); background-size: cover;">
+        <div class="fade-in" style="background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(2, 2, 2, 0.75)), url("{{ $movie->photo_bg }}"); background-size: cover;">
             <div class="container">
                 <div class="row py-3">
                     <div class="col-12 col-md-4 m-0 p-0">
@@ -16,7 +16,11 @@
                         </ul>
                         <h5 class="font-weight-bold pt-3">Overview</h5>
                         <p>{{$movie->body}}</p>
-                        <a href="" id="btn-watchlist" class="btn btn-warning btn-md" role="button">Watchlist</a>
+                        <form method="POST" action="/movie/{{ $movie->slug }}/watchlist">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $movie->id }}">
+                        <button class="btn btn-warning btn-md" type="submit">Watchlist </button>
+                        </form>
                         <!-- <a href="/" class="btn-home">&8249;</a> -->
                     </div>
                 </div>
@@ -26,7 +30,7 @@
     <div class="container my-5 p-0 d-flex flex-column align-items-center">
 
         @auth
-        <div class="border border-gray-400 p-4 rounded" style="min-width: 80%;">
+        <div class="border border-gray-400 p-4 rounded" style="min-width: 80%">
             <form method="POST" action="/movies/{{ $movie->slug }}/comments">
                 @csrf
 
