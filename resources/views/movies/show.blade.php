@@ -1,7 +1,7 @@
 <x-layout>
 
     <div>
-        <div class="fade-in" style="background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(2, 2, 2, 0.75)), url("{{ $movie->photo_bg }}"); background-size: cover;">
+        <div class="fade-in" style="background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(2, 2, 2, 0.75)), url('{{$movie->photo_bg}}'); background-size: cover;">
             <div class="container">
                 <div class="row py-3">
                     <div class="col-12 col-md-4 m-0 p-0">

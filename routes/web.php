@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminMovieController;
 use App\Http\Controllers\MovieCommentsController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
@@ -44,11 +45,37 @@ Route::post("/sessions", [SessionsController::class, "store"])->middleware(
 );
 
 // middleware = app/http/middleware. If your are a guest you are not able to logout.
+
 Route::post("logout", [SessionsController::class, "destroy"])->middleware(
     "auth"
 );
 
 Route::get("/movies/watchlist", [WatchlistController::class, "show"]);
+
+Route::post("logout", [SessionsController::class, "destroy"])->middleware("auth");
+
+Route::get('/watchlist', function () {
+    return view('watchlist');
+});
+
+
+// Admin
+
+Route::get('/admin/dashboard', [SessionsController::class, "authAdmin"])->middleware('admin');
+
+Route::post('/admin/dashboard/movies', [AdminMovieController::class, 'store'])->middleware('admin');
+
+Route::get('/admin/dashboard/movies/create', [AdminMovieController::class, 'create'])->middleware('admin');
+
+Route::get('/admin/dashboard/movies', [AdminMovieController::class, 'index'])->middleware('admin');
+
+Route::get('/admin/dashboard/movies/{movie}/edit', [AdminMovieController::class, 'edit'])->middleware('admin');
+
+Route::patch('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'update'])->middleware('admin');
+
+Route::get('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'update'])->middleware('admin');
+
+Route::delete('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'destroy'])->middleware('admin');
 
 Route::post("/movie/{movie:slug}/watchlist", [
     WatchlistController::class,
