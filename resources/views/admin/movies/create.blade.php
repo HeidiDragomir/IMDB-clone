@@ -1,23 +1,24 @@
 <x-layout>
 
     <section>
-        <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center">Publish New Movie</h1>
+        <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Publish New Movie</h1>
         <div class="pt-5 pb-5">
             <div class="container-xxl">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div>
-                        <aside class="w-48">
-                            <ul>
+                <div class="row d-flex justify-content-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+
+                        <aside>
+                            <ul class="list-unstyled">
                                 <li>
-                                    <a href="/admin/dashboard/movies">All Movies</a>
+                                    <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/dashboard/movies/create">New Movie</a>
+                                    <a href="/admin/dashboard/movies/create" class="link-dark text-decoration-none">New Movie</a>
                                 </li>
                             </ul>
                         </aside>
-
                     </div>
+
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card bg-light" style="border-radius: 15px;">
                             <div class="card-body p-5">
