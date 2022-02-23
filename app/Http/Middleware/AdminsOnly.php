@@ -19,12 +19,17 @@ class AdminsOnly
     {
         $admins = ['Filip', 'Cemil', 'Heidi', 'Henrik', 'Ahmet', 'Alexander', 'Sebbe'];
 
-        for ($i = 0; $i <= count($admins); $i++) {
-            if (auth()->user()?->username != $admins[$i]) {
-                abort(RedirectResponse::HTTP_FORBIDDEN);
-            }
+        for ($i = 0; $i < count($admins); $i++) {
 
-            return $next($request);
+            if (auth()->user()->username == $admins[$i]) {
+                return $next($request);
+            }
+        }
+        for ($i = 0; $i < count($admins); $i++) {
+
+            if (auth()->user()->username != $admins[$i]) {
+                return redirect('/');
+            }
         }
     }
 }

@@ -29,7 +29,7 @@ Route::post("/movies/{movie:slug}/comments", [MovieCommentsController::class, "s
 Route::get("/register", [RegisterController::class, "create"])->middleware("guest");
 Route::post("/register", [RegisterController::class, "store"])->middleware("guest");
 
-Route::get("/login", [SessionsController::class, "create"])->middleware("guest");
+Route::get("/login", [SessionsController::class, "create"])->middleware("guest")->name('login');
 
 Route::post("/sessions", [SessionsController::class, "store"])->middleware("guest");
 
@@ -41,7 +41,7 @@ Route::get("/movies/watchlist", [WatchlistController::class, "index"]);
 Route::post("/movie/{movie:slug}/watchlist", [WatchlistController::class,"store",]);
 
 // Admin
-Route::get('/admin/dashboard', [SessionsController::class, "authAdmin"])->middleware('admin');
+Route::get('/admin/dashboard', [SessionsController::class, "authAdmin"])->middleware('admin', 'auth');
 
 Route::post('/admin/dashboard/movies', [AdminMovieController::class, 'store'])->middleware('admin');
 
@@ -53,8 +53,6 @@ Route::patch('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'u
 Route::get('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'update'])->middleware('admin');
 Route::delete('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'destroy'])->middleware('admin');
 
-
-Route::get("/admin/dashboard", [SessionsController::class,"authAdmin",])->middleware("admin");
 
 
 
