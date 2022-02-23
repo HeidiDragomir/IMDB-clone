@@ -57,7 +57,7 @@ class AdminMovieController extends Controller
 
         $movie->update($attributes);
 
-        return back()->with('success', 'Movie Updated!');
+        return redirect('/admin/dashboard/movies')->with('success', 'Movie Updated!');
     }
 
     public function destroy(Movie $movie)

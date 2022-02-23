@@ -56,6 +56,8 @@ Route::get('/admin/dashboard/movies/{movie}/edit', [AdminMovieController::class,
 
 Route::patch('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'update'])->middleware('admin');
 
+Route::get('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'update'])->middleware('admin');
+
 Route::delete('/admin/dashboard/movies/{movie}', [AdminMovieController::class, 'destroy'])->middleware('admin');
 
 
