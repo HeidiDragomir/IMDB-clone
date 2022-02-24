@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class MovieCommentsController extends Controller
 {
-     public function store(Movie $movie) {
+    public function store(Movie $movie)
+    {
 
         // validation
         request()->validate([
@@ -23,6 +24,9 @@ class MovieCommentsController extends Controller
         ]);
 
         // Redirect
-        return back();
+        return back()->with([
+            'success' => 'Your comment needs to be approved!',
+            'color' => 'primary'
+        ]);
     }
 }

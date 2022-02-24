@@ -46,7 +46,10 @@ class AdminCommentController extends Controller
         $comment->approved = $approveVal;
         $comment->save();
 
-        return back();
+        return back()->with([
+            'success' => 'The comment is now published!',
+            'color' => 'primary'
+        ]);;
     }
 
 
