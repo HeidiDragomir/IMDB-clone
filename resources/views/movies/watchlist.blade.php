@@ -11,9 +11,9 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{ $watchlist->movie->title }}</h5>
-                        <p class="card-text">{{ $watchlist->movie->body }}</p>
+                        <p class="card-text">{{ \Illuminate\Support\Str::limit($watchlist->movie->body, 200, '...') }}</p>
                     </div>
-                </div>
+                </div> 
             </div>
             <form method="POST" action="/movie/watchlist/delete">
                 @csrf
