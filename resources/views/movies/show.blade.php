@@ -19,7 +19,7 @@
                         <form method="POST" action="/movie/{{ $movie->slug }}/watchlist">
                             @csrf
                             <input type="hidden" name="id" value="{{ $movie->id }}">
-                        <button class="btn btn-warning btn-md" type="submit">Watchlist </button>
+                            <button class="btn btn-warning btn-md" type="submit">Watchlist </button>
                         </form>
                         <!-- <a href="/" class="btn-home">&8249;</a> -->
                     </div>
@@ -69,7 +69,12 @@
         </p>
         @endauth
 
+
+
         @foreach ($movie->comments as $comment)
+
+        @if($comment->approved == 1)
+
         <div class="border border-gray-400 p-4 rounded bg-light mt-3" style="min-width: 80%;">
             <article class="d-flex ">
                 <div class="flex-shrink-0">
@@ -99,6 +104,8 @@
                 </div>
             </article>
         </div>
+        @endif
         @endforeach
+
     </div>
 </x-layout>
