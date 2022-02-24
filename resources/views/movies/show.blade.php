@@ -16,12 +16,10 @@
                         </ul>
                         <h5 class="font-weight-bold pt-3">Overview</h5>
                         <p>{{$movie->body}}</p>
-                        <form method="POST" action="/movie/{{ $movie->slug }}/watchlist">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $movie->id }}">
-                        <button class="btn btn-warning btn-md" type="submit">Watchlist </button>
-                        </form>
-                        <!-- <a href="/" class="btn-home">&8249;</a> -->
+                            <form method="POST" action="/movie/{{ $movie->slug}}/add">
+                                @csrf
+                            <button class="btn btn-warning btn-md" type="submit">Watchlist</button>
+                            </form>
                     </div>
                 </div>
             </div>
