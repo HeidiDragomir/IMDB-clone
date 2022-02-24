@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
+
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule as ValidationRule;
+
 
 class MovieController extends Controller
 {
