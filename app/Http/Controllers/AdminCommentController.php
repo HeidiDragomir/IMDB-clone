@@ -12,7 +12,7 @@ class AdminCommentController extends Controller
     public function index()
     {
         return view('admin.approvalComments', [
-            'comments' => Comment::all()
+            'comments' => Comment::all()->reverse()
         ]);
     }
 
@@ -22,6 +22,7 @@ class AdminCommentController extends Controller
             'stars' => 'required',
             'body' => 'required',
             'approved' => 'required',
+            'created_at' => 'required',
             'movie_id' => ['required', Rule::exists('movies', 'id')],
             'user_id' => ['required', Rule::exists('user', 'id')]
         ]);

@@ -3,92 +3,90 @@
     <section>
         <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Manage Comments</h1>
 
+        <div class="card-body m-5 p-5">
 
-        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-            <div class="card bg-light" style="border-radius: 15px;">
-                <div class="card-body p-5">
+            <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        <th>
+                            User
+                        </th>
+                        <th>
+                            Movie
+                        </th>
+                        <th>
+                            Comment
+                        </th>
+                        <th>
+                            Created at
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th colspan="2" class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($comments as $comment)
+                    <tr>
+                        <td class="align-middle">
+                            {{ $comment->user->username}}
 
-                    <table class="table table-striped custab">
-                        <thead>
-                            <tr>
-                                <th>
-                                    User
-                                </th>
-                                <th>
-                                    Movie
-                                </th>
-                                <th>
-                                    Comment
-                                </th>
-                                <th>
-                                    Status
-                                </th>
-                                <th colspan="2">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($comments as $comment)
-                            <tr>
-                                <td class="align-middle">
-                                    {{ $comment->user->username}}
+                        </td>
+                        <td class="align-middle">
+                            {{ $comment->movie->title }}
 
-                                </td>
-                                <td class="align-middle">
-                                    {{ $comment->movie->title }}
+                        </td>
 
-                                </td>
+                        <td class="align-middle">
+                            {{ $comment->body }}
 
-                                <td class="align-middle">
-                                    {{ $comment->body }}
+                        </td>
+                        <td class="align-middle">
+                            {{ $comment->created_at }}
+                        </td>
+                        @if ($comment->approved == true)
+                        <td class="align-middle">
+                            Approved
+                        </td>
+                        @else
+                        <td class="align-middle">
+                            Waiting
+                        </td>
+                        @endif
+                        <td class="align-middle">
 
-                                </td>
-                                @if ($comment->approved == true)
-                                <td class="align-middle">
-                                    Approved
-                                </td>
-                                @else
-                                <td class="align-middle">
-                                    Waiting
-                                </td>
+                            <form class="form-check form-check-inline" action="/admin/dashboard/comments/approve" method="POST">
+                                @csrf
+
+                                <input class="form-check-input" type="checkbox" name='approved'>
+
+                                @if($comment->approve == 1)
+                                <input type="checkbox" name='approved' checked>
                                 @endif
-                                <td class="align-middle">
 
-                                    <form action="/admin/dashboard/comments/approve" method="POST">
-                                        @csrf
+                                <input type="hidden" name="commentId" value="{{$comment->id}}">
+                                <input class="btn btn-success" type="submit" value="Approve">
 
-                                        <input type="checkbox" name='approved'>
+                            </form>
+                        </td>
+                        <td class="align-middle">
 
-                                        @if($comment->approve == 1)
-                                        <input type="checkbox" name='approved' checked>
-                                        @endif
+                            <form method="POST" action="/admin/dashboard/comments/{{ $comment->id }}">
+                                @csrf
+                                @method('DELETE')
 
-                                        <input type="hidden" name="commentId" value="{{$comment->id}}">
-                                        <input class="btn btn-primary" type="submit" value="Approve">
+                                <input class="btn btn-danger" type="submit" value="Delete">
+                            </form>
+                        </td>
 
-                                    </form>
-                                </td>
-                                <td class="align-middle">
+                    </tr>
 
-                                    <form method="POST" action="/admin/dashboard/comments/{{ $comment->id }}">
-                                        @csrf
-                                        @method('DELETE')
+                    @endforeach
+                </tbody>
 
-                                        <input class="btn btn-danger" type="submit" value="Delete">
-                                    </form>
-                                </td>
-
-                            </tr>
-
-
-                            @endforeach
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
+            </table>
         </div>
-
-
 
     </section>
 </x-layout>
