@@ -8,7 +8,7 @@
     <title>MovieMe</title>
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    
+
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -27,32 +27,40 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Movies</a>
                     </li>
-                    @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="/watchlist">Watchlist</a>
-                    </li>
-                    @endauth
+
                 </ul>
 
                 <div class="d-flex">
-                    @auth <!-- Checks if the user is sign in or a guest -->
-                    <span class="nav-link text-dark text-uppercase me-3">Welcome {{ auth()->user()->name }}!</span>
-                
-                    <form method="POST" action="/logout">
-                    @csrf
-                    <button class="btn btn-outline-danger" type="submit">Log Out</button>
-                    </form>
+                    @auth
+                    <!-- Checks if the user is sign in or a guest -->
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Welcome {{ auth()->user()->name }}!
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="/watchlist">Watchlist</a></li>
+                            @can('admin')
+                            <li><a class="dropdown-item" href="/admin/dashboard">Admin</a></li>
+                            @endcan
+                            <form method="POST" action="/logout">
+                                @csrf
+                                <li><button class="dropdown-item" type="submit">Log Out</button></li>
+                            </form>
+                        </ul>
+                    </div>
                     @else
                     <a href="/login" class="btn btn-outline-success">Login</a>
                     <a href="/register" class="btn btn-outline-primary ms-2">Signup</a>
                     @endauth
                 </div>
-            
             </div>
         </div>
     </nav>
     <x-flash />
     <!-- NAVBAR -->
+
+
 
     <main>
 
