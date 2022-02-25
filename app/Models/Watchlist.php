@@ -11,7 +11,6 @@ class Watchlist extends Model
 
     protected $guarded = [];
 
-    
     public function movie()
     {
         return $this->belongsTo(Movie::class);

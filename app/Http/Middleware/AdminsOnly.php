@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminsOnly
 {
@@ -17,19 +17,11 @@ class AdminsOnly
      */
     public function handle(Request $request, Closure $next)
     {
-        $admins = ['Filip', 'Cemil', 'Heidi', 'Henrik', 'Ahmet', 'Alexander', 'Sebbe'];
-
-        for ($i = 0; $i < count($admins); $i++) {
-
-            if (auth()->user()->username == $admins[$i]) {
-                return $next($request);
-            }
+        
+        if(auth()->user()?->is_admin !== 1) {
+            abort(Response::HTTP_FORBIDDEN);
         }
-        for ($i = 0; $i < count($admins); $i++) {
-
-            if (auth()->user()->username != $admins[$i]) {
-                return redirect('/');
-            }
-        }
+        return $next($request);
     }
 }
+
