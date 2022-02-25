@@ -119,7 +119,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2021,
             'body' => 'Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -129,7 +130,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2022,
             'body' => 'A couple on a romantic getaway find themselves stranded at sea when a tropical storm sweeps away their villa. In order to survive, they are forced to fight the elements, while sharks circle below.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/i0z8g2VRZP3dhVvvSMilbOZMKqR.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/eVSa4TpyXbOdk9fXSD6OcORJGtv.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/eVSa4TpyXbOdk9fXSD6OcORJGtv.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -149,7 +151,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2022,
             'body' => 'A group of top female agents from American, British, Chinese, Columbian and German government agencies are drawn together to try and stop an organization from acquiring a deadly weapon to send the world into chaos.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/wZ2cQ4moYnIrJVaave1KUqH33Gc.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/8pgKccb5PfE1kWB9qqiXJem83VC.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/8pgKccb5PfE1kWB9qqiXJem83VC.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -159,7 +162,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2022,
             'body' => 'When a vintage Jack-in-the-box is opened by a dying woman, she enters into a deal with the demon within that would see her illness cured in return for helping it claim six innocent victims.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/3Ib8vlWTrAKRrTWUrTrZPOMW4jp.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/xHRabofjmMGoIV3mb6xgy4nwOcS.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/xHRabofjmMGoIV3mb6xgy4nwOcS.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -189,7 +193,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2021,
             'body' => 'Plagued by strange memories, Neo\'s life takes an unexpected turn when he finds himself back inside the Matrix.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/8c4a8kE7PizaGQQnditMmI1xbRp.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -199,7 +204,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2021,
             'body' => 'After civilization succumbs to a deadly pandemic and his wife is murdered, a special forces soldier abandons his duty and becomes a hermit in the Nordic wilderness. Years later, a wounded woman appears on his doorstep. She\'s escaped from a lab and her pursuers believe her blood is the key to a worldwide cure. He\'s hesitant to get involved, but all doubts are cast aside when he discovers her pursuer is none other than Commander Stone, the man that murdered his wife some years ago.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/4B7liCxNCZIZGONmAMkCnxVlZQV.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/t4To8feUSysyBs4tlBAbXIrKlCv.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/t4To8feUSysyBs4tlBAbXIrKlCv.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -229,7 +235,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2021,
             'body' => 'When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/vHla3Ej2m53rNmvmYkzvennLrKn.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -239,7 +246,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2022,
             'body' => 'A young street-smart, Nathan Drake and his wisecracking partner Victor "Sully" Sullivan embark on a dangerous pursuit of "the greatest treasure never found" while also tracking clues that may lead to Nathan\'s long-lost brother.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/nMO3QWa6liTwNWhVICkjzaYfPoH.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/oUoFM0f4YFW2jw7AymxUXYvGv7S.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/oUoFM0f4YFW2jw7AymxUXYvGv7S.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -249,7 +257,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2021,
             'body' => 'Washed-up MMA fighter Cole Young, unaware of his heritage, and hunted by Emperor Shang Tsung\'s best warrior, Sub-Zero, seeks out and trains with Earth\'s greatest champions as he prepares to stand against the enemies of Outworld in a high stakes battle for the universe.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/nkayOAUBUu4mMvyNf9iHSUiPjF1.jpg',
-            'photo_bg' => 'https://image.tmdb.org/t/p/original/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg'
+            'photo_bg' => 'https://image.tmdb.org/t/p/original/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -329,7 +338,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2021,
             'body' => 'A cold and mysterious new security guard for a Los Angeles cash truck company surprises his co-workers when he unleashes precision skills during a heist. The crew is left wondering who he is and where he came from. Soon, the marksman\'s ultimate motive becomes clear as he takes dramatic and irrevocable steps to settle a score.',
             'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/M7SUK85sKjaStg4TKhlAVyGlz3.jpg',
-            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/70AV2Xx5FQYj20labp0EGdbjI6E.jpg'
+            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/70AV2Xx5FQYj20labp0EGdbjI6E.jpg',
+            'is_carousel' => 1
         ]);
 
         Movie::create([
@@ -369,7 +379,8 @@ class DatabaseSeeder extends Seeder
             'year' => 2020,
             'body' => 'Markus returns home to care for his daughter when his wife dies in a tragic train accident. However, when a survivor of the wreck surfaces and claims foul play, Markus suspects his wife was murdered and embarks on a mission to find those responsible.',
             'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/sshNnwmQLk720iBQ0dZg3GVGKfK.jpg',
-            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/7XZsVVnqTsMJXg3J4CHzeV2Lro9.jpg'
+            'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/7XZsVVnqTsMJXg3J4CHzeV2Lro9.jpg',
+            'is_carousel' => 1
         ]);
     
         Movie::create([

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('body');
             $table->string('photo_poster');
             $table->string('photo_bg');
+            $table->boolean('is_carousel')->default(0);
             $table->timestamps();
             $table->timestamp('published_at')->nullable();
         });

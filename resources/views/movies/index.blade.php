@@ -1,60 +1,7 @@
 <x-layout>
 
   <!-- CARUSELL -->
-  <div id="carouselExampleCaptions" class="carousel slide fade-in" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active slider-container">
-        <img src="https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg" alt="Spider Man No Way Home movie poster" class="slider-image" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Spider-Man: No Way Home</h5>
-          <p>2021</p>
-        </div>
-      </div>
-      <div class="carousel-item slider-container">
-        <img src="https://image.tmdb.org/t/p/original/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg" alt="The Matrix movie poster" class="slider-image" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>The Matrix Resurrections</h5>
-          <p>2021</p>
-        </div>
-      </div>
-      <div class="carousel-item slider-container">
-        <img src="https://image.tmdb.org/t/p/original/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg" alt="Mortal Kombat movie poster" class="slider-image" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Mortal Kombat</h5>
-          <p>2021</p>
-        </div>
-      </div>
-      <div class="carousel-item slider-container">
-        <img src="https://image.tmdb.org/t/p/original/jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg" alt="House Of Gucci movie poster" class="slider-image" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>House of Gucci</h5>
-          <p>2021</p>
-        </div>
-      </div>
-      <div class="carousel-item slider-container">
-        <img src="https://image.tmdb.org/t/p/original/eVSa4TpyXbOdk9fXSD6OcORJGtv.jpg" alt="The Requin movie poster" class="slider-image" />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>The Requin</h5>
-          <p>2022</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  <x-movie-carousel />
 
   <!-- DROPDOWN FOR CATEGORIES -->
   <div class="container">
