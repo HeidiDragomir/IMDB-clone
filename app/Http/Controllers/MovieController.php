@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
-
+use App\Models\Watchlist;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule as ValidationRule;
 
@@ -19,10 +19,11 @@ class MovieController extends Controller
         ]);
     }
 
-    public function show(Movie $movie)
+    public function show(Movie $movie, Watchlist $watchlist)
     {
         return view('movies.show', [
-            'movie' => $movie
+            'movie' => $movie,
+            'watchlist' => $watchlist
         ]);
     }
 }

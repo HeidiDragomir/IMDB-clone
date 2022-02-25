@@ -22,25 +22,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [MovieController::class, "index"])->name("home");
-
 Route::get("/movies/{movie:slug}", [MovieController::class, "show"]);
-
 
 // Comments
 Route::post("/movies/{movie:slug}/comments", [MovieCommentsController::class, "store",]);
-
-
 Route::get("/admin/dashboard/comments", [AdminCommentController::class, "index",])->middleware("admin");
-
-
 Route::post("/admin/dashboard/comments", [AdminCommentController::class, "store"])->middleware("admin");
-
-
 Route::post("/admin/dashboard/comments/approve", [AdminCommentController::class, "approval"])->middleware("admin");
-
-
 Route::delete("/admin/dashboard/comments/{comment}", [AdminCommentController::class, "destroy"])->middleware("admin");
-
 
 // middleware = app/http/middleware. If your logged in you are not able to create and store.
 Route::get("/register", [RegisterController::class, "create"])->middleware("guest");
@@ -54,7 +43,6 @@ Route::post("/sessions", [SessionsController::class, "store"])->middleware("gues
 Route::post("logout", [SessionsController::class, "destroy"])->middleware("auth");
 
 // Watchlist
-/* Route::get("/movies/watchlist", [WatchlistController::class, "index"]); */
 Route::post("/movie/{movie:slug}/add", [WatchlistController::class,'store',])->middleware("auth");
 Route::get('/watchlist', [WatchlistController::class, 'show'])->middleware("auth");
 Route::delete('/movie/watchlist/delete', [WatchlistController::class, 'destroy'])->middleware("auth");;
