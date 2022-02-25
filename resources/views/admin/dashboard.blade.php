@@ -5,8 +5,8 @@
     <!-- Link to admin/movies, admin/review, admin/comment - only for test - to be customized later -->
 
     <p><a href="/admin/dashboard/movies">Movies</a></p>
-    <p><a href="/admin/dashboard/movies">Comments</a></p>
-    <p><a href="/admin/dashboard/movies">Reviews</a></p>
+    <p><a href="/admin/dashboard/comments">Comments</a></p>
+
 
 
 
