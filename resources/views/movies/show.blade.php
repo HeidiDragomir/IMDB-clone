@@ -16,10 +16,20 @@
                         </ul>
                         <h5 class="font-weight-bold pt-3">Overview</h5>
                         <p>{{$movie->body}}</p>
+                            @if($watchlist->where('movie_id', $movie->id)->exists())
+                            <form method="POST" action="/movie/watchlist/delete">
+                                @csrf
+                                @method('DELETE')
+                                <input type="hidden" name="movie_id" value="{{ $movie->id }}">
+                            <button class="btn btn-outline-warning d-flex align-items-center" type="submit"><ion-icon name="checkmark-outline" class="me-2"></ion-icon> Added to Watchlist</button>
+                            </form>
+                            @else
                             <form method="POST" action="/movie/{{ $movie->slug}}/add">
                                 @csrf
-                            <button class="btn btn-warning btn-md" type="submit">Watchlist</button>
+                            <input type="hidden" name="movie_id" value="{{ $movie->id }}">
+                            <button class="btn btn-warning btn-md d-flex align-items-center" type="submit"><ion-icon name="add-outline" class="me-2"></ion-icon> Add to Watchlist</button>
                             </form>
+                            @endif
                     </div>
                 </div>
             </div>
