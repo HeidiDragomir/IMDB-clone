@@ -38,9 +38,9 @@ Route::post("logout", [SessionsController::class, "destroy"])->middleware("auth"
 
 // Watchlist
 /* Route::get("/movies/watchlist", [WatchlistController::class, "index"]); */
-Route::post("/movie/{movie:slug}/add", [WatchlistController::class,'store',]);
-Route::get('/watchlist', [WatchlistController::class, 'show']);
-Route::delete('/movie/watchlist/delete', [WatchlistController::class, 'destroy']);
+Route::post("/movie/{movie:slug}/add", [WatchlistController::class,'store',])->middleware("auth");
+Route::get('/watchlist', [WatchlistController::class, 'show'])->middleware("auth");
+Route::delete('/movie/watchlist/delete', [WatchlistController::class, 'destroy'])->middleware("auth");;
 
 
 // Admin
