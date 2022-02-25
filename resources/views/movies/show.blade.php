@@ -67,7 +67,12 @@
         </p>
         @endauth
 
+
+
         @foreach ($movie->comments as $comment)
+
+        @if($comment->approved == 1)
+
         <div class="border border-gray-400 p-4 rounded bg-light mt-3" style="min-width: 80%;">
             <article class="d-flex ">
                 <div class="flex-shrink-0">
@@ -97,6 +102,8 @@
                 </div>
             </article>
         </div>
+        @endif
         @endforeach
+
     </div>
 </x-layout>

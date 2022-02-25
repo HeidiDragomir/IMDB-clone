@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // if user deletes, the comment deletes in db
             $table->integer('stars');
             $table->text('body');
+            $table->boolean('approved')->default(false);
             $table->timestamps();
         });
     }
