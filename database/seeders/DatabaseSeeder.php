@@ -17,7 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       
 
         Category::truncate();
         Movie::where('id', '>', 0)->delete();
@@ -26,49 +25,56 @@ class DatabaseSeeder extends Seeder
             'username' => 'Filip',
             'name' => 'Filip',
             'email' => 'filip@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         User::create([
             'username' => 'Cemil',
             'name' => 'Cemil',
             'email' => 'cemil@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         User::create([
             'username' => 'Heidi',
             'name' => 'Heidi',
             'email' => 'heidi@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         User::create([
             'username' => 'Henrik',
             'name' => 'Henrik',
             'email' => 'henrik@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         User::create([
             'username' => 'Ahmet',
             'name' => 'Ahmet',
             'email' => 'ahmet@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         User::create([
             'username' => 'Alexander',
             'name' => 'Alexander',
             'email' => 'alexander@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         User::create([
             'username' => 'Sebbe',
             'name' => 'Sebbe',
             'email' => 'sebbe@test.se',
-            'password' => 'test1234'
+            'password' => 'test1234',
+            'is_admin' => '1'
         ]);
 
         $action = Category::create([
