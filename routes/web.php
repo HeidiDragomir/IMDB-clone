@@ -54,8 +54,11 @@ Route::post("/sessions", [SessionsController::class, "store"])->middleware("gues
 Route::post("logout", [SessionsController::class, "destroy"])->middleware("auth");
 
 // Watchlist
-Route::get("/movies/watchlist", [WatchlistController::class, "index"]);
-Route::post("/movie/{movie:slug}/watchlist", [WatchlistController::class, "store",]);
+/* Route::get("/movies/watchlist", [WatchlistController::class, "index"]); */
+Route::post("/movie/{movie:slug}/add", [WatchlistController::class,'store',]);
+Route::get('/watchlist', [WatchlistController::class, 'show']);
+Route::delete('/movie/watchlist/delete', [WatchlistController::class, 'destroy']);
+
 
 // Admin
 Route::get('/admin/dashboard', [SessionsController::class, "authAdmin"])->middleware('admin', 'auth');
