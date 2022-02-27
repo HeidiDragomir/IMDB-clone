@@ -1,33 +1,48 @@
 <x-layout>
-
-    <section class="container my-4 d-flex justify-content-center align-items-center flex-column">
+<div class="container my-4">
+<h2 class="featurette-heading">Your Watchlist</h2>
+</div>
         @if($watchlists->count())
-        @foreach ($watchlists as $watchlist)
-            <div class="card shadow-lg p-3 mb-5 bg-light rounded" style="max-width: 540px;">
-            <div class="row g-0 justify-content-center">
-                <div class="col-md-4">
-                    <img src="{{ $watchlist->movie->photo_poster }}" class="w-100" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $watchlist->movie->title }}</h5>
-                        <p class="card-text">{{ \Illuminate\Support\Str::limit($watchlist->movie->body, 200, '...') }}</p>
+        <div class="album">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    @foreach ($watchlists as $watchlist)
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <a href="/movies/{{ $watchlist->movie->slug }}">
+                                <img src="{{ $watchlist->movie->photo_poster }}" class="card-img-top brightness"></img>
+                            </a>
+                            <div class="card-body">
+                                <a class="text-decoration-none text-dark" href="/movies/{{ $watchlist->movie->slug }}">
+                                    <h4 class="card-text mb-2">{{ $watchlist->movie->title }}</h4>
+                                    <p class="card-text mb-4">{{ \Illuminate\Support\Str::limit($watchlist->movie->body, 200, '...') }}</p>
+                                </a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form method="POST" action="/movie/watchlist/delete">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type="hidden" name="id" value="{{ $watchlist->id }}">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger d-flex align-items-center"><ion-icon class="me-1" style="padding-top: 0.8px;" name="close-outline"></ion-icon>Remove</button>
+                                        </form>
+                                    </div>
+                                    <small class="text-muted">{{ $watchlist->created_at->diffForHumans() }}</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div> 
+                    @endforeach
+                </div>
+                <div class="mt-4">
+                    {{ $watchlists->links() }} <!-- RENDER THE PAGINATIONS LINKS -->
+                </div>
             </div>
-            
-            <form method="POST" action="/movie/watchlist/delete">
-                @csrf
-                @method('DELETE')
-                <input type="hidden" name="id" value="{{ $watchlist->id }}">
-                <button type="submit" class="btn btn-outline-danger btn-sm mt-2 w-100" data-mdb-ripple-color="#000000">Remove from watchlist</button>
-            </form>
         </div>
-        @endforeach
         @else
-        <p>No movies in your Watchlist.</p>
+        <div class="container mt-4">
+            <p>No movies in your Watchlist.</p>
+        </div>
         @endif
-    </section>
 
 
 
