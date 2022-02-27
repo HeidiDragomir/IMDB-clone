@@ -1,4 +1,5 @@
 <x-layout>
+    <x-admin-navbar />
 
     <section>
         <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Manage Comments</h1>
