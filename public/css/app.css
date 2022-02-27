@@ -108,3 +108,8 @@
 .brightness:hover {
     filter: brightness(130%);
 }
+
+.buttonstyle {
+    color: red;
+    font-size: 50px;
+}
