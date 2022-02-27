@@ -9,12 +9,12 @@
                         
                         <aside>
                             <ul class="list-unstyled">
-                                <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Publish New Movie</h1>
+                                <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Add New User</h1>
                                 <li>
-                                    <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
+                                    <a href="/admin/dashboard/users" class="link-dark text-decoration-none">All Users</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/dashboard/movies/create" class="link-dark text-decoration-none">New Movie</a>
+                                    <a href="/admin/dashboard/users/create" class="link-dark text-decoration-none">New User</a>
                                 </li>
                             </ul>
                         </aside>
@@ -24,17 +24,17 @@
                         <div class="card bg-light" style="border-radius: 15px;">
                             <div class="card-body p-5">
 
-                                <form method="POST" action="/admin/dashboard/movies">
+                                <form method="POST" action="/admin/dashboard/users">
                                     @csrf
 
-                                    <x-form-movie.input name="title" />
+                                    <x-form-movie.input name="username" />
 
-                                    <x-form-movie.input name="slug" />
+                                    <x-form-movie.input name="name" />
 
-                                    <x-form-movie.input name="year" />
+                                    <x-form-movie.input name="email" />
 
 
-                                    <div class="form-outline mb-4">
+                                    {{-- <div class="form-outline mb-4">
                                         <label class="form-label" for="category_id">Genre</label>
                                         <select name="category_id" id="category_id">
                                             @php
@@ -67,10 +67,10 @@
                                     <x-form-movie.input name="photo_poster" />
 
                                     <x-form-movie.input name="photo_bg" />
-
+                                    --}}
 
                                     <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn btn-outline-success btn-lg">Publish</button>
+                                        <button type="submit" class="btn btn btn-outline-success btn-lg">Add User</button>
                                     </div>
 
                                 </form>
