@@ -79,7 +79,7 @@
 
 
 
-        @foreach ($movie->comments as $comment)
+        @foreach ($movie->comments->reverse() as $comment)
 
         @if($comment->approved == 1)
 

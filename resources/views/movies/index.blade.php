@@ -92,7 +92,9 @@
         </a>
       </div>
       @endforeach
-      {{ $movies->links() }} <!-- RENDER THE PAGINATIONS LINKS -->
+      <div class="mt-4">
+        {{ $movies->links() }} <!-- RENDER THE PAGINATIONS LINKS -->
+      </div>
       @else
       <p>No movies. Please check back later.</p>
       @endif
