@@ -15,7 +15,7 @@
                                     <a href="/admin/dashboard/users" class="link-dark text-decoration-none">All Users</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/dashboard/users/newuser" class="link-dark text-decoration-none">New User</a>
+                                    <a href="/admin/dashboard/users/create" class="link-dark text-decoration-none">New User</a>
                                 </li>
                             </ul>
                         </aside>
