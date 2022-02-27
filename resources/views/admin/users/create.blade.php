@@ -33,8 +33,17 @@
 
                                     <x-form-movie.input name="email" />
 
+                                    <x-form-movie.input name="password" />
 
-                                    {{-- <div class="form-outline mb-4">
+
+                                    <div>
+                                    <label for="admin">Admin</label>
+                                    <input type="hidden" name="is_admin" value="0" />
+                                    <input type="checkbox" name="is_admin" value="1">                                
+                                    </div>
+
+
+                                    <!--  <div class="form-outline mb-4">
                                         <label class="form-label" for="category_id">Genre</label>
                                         <select name="category_id" id="category_id">
                                             @php
@@ -66,9 +75,9 @@
 
                                     <x-form-movie.input name="photo_poster" />
 
-                                    <x-form-movie.input name="photo_bg" />
-                                    --}}
+                                    <x-form-movie.input name="photo_bg" /> -->
 
+                                
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Add User</button>
                                     </div>

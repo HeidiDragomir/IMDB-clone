@@ -135,7 +135,7 @@ Route::post("/admin/dashboard/users", [
     "store",
 ])->middleware("admin");
 
-Route::get("/admin/dashboard/users/newuser", [
+Route::get("/admin/dashboard/users/create", [
     AdminUserController::class,
     "create",
 ])->middleware("admin");
@@ -144,10 +144,12 @@ Route::patch("/admin/dashboard/users/{user}", [
     AdminUserController::class,
     "update",
 ])->middleware("admin");
+
 Route::get("/admin/dashboard/users/{user}", [
     AdminUserController::class,
     "update",
 ])->middleware("admin");
+
 Route::delete("/admin/dashboard/users/{user}", [
     AdminUserController::class,
     "destroy",

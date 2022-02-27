@@ -20,7 +20,7 @@ class AdminUserController extends Controller
 
     public function create()
     {
-        return view("admin.movies.create");
+        return view("admin.users.create");
     }
 
     public function edit(User $user)
@@ -52,12 +52,10 @@ class AdminUserController extends Controller
     {
         $attributes = request()->validate([
             "username" => "required",
-            /* "name" => [
-                "required",
-                Rule::unique("movies", "slug")->ignore($movie),
-            ], */
+            "password" => "required",
             "name" => "required",
             "email" => "required",
+            "is_admin" => "required",
         ]);
 
         User::create($attributes);
