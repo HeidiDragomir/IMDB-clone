@@ -4,21 +4,19 @@
   <x-movie-carousel />
 
   <!-- DROPDOWN FOR CATEGORIES -->
-  <div class="container">
-    <div class="d-flex align-items-center mt-3">
+  <div class="container ">
+    <div class="d-flex align-items-center mt-4">
       <x-category-dropdown />
-
       <!-- SEARCH BAR -->
-      <div class=" col-md-10 ">
-        <div class="col-auto">
-          <form method="GET" action="/">
-            @if(request('category'))
-            <input type="hidden" name="category" value="{{ request('category') }}">
-            @endif
-            <input type="search" name="search" class="form-control col-lg-auto fs-5 pt-2 pb-2" placeholder="Search..." aria-label="Search" value="{{ request('search') }}">
-          </form>
+       <div class="col-xs-7 col-sm-6 col-lg-10" style="margin-left:25px">
+      <form class="d-flex" method="GET" action="/">
+              @if(request('category'))
+              <input type="hidden" name="category" value="{{ request('category') }}">
+              @endif
+              <input type="search" name="search" class="form-control col-lg-auto fs-5 pt-2 pb-2 " placeholder="Search..." aria-label="Search" value="{{ request('search') }}" type="submit" style="border-radius: 5px 0px 0px 5px"> 
+              <button class="btn btn-dark" type="submit" style="border-radius: 0px 5px 5px 0px">Search</button>
+          </form>    
         </div>
-      </div>
     </div>
   </div>
 
@@ -41,9 +39,7 @@
         </a>
       </div>
       @endforeach
-      <div class="mt-4">
-        {{ $movies->links() }} <!-- RENDER THE PAGINATIONS LINKS -->
-      </div>
+      {{ $movies->links() }} <!-- RENDER THE PAGINATIONS LINKS -->
       @else
       <p>No movies. Please check back later.</p>
       @endif
