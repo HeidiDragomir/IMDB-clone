@@ -66,6 +66,8 @@
 
                                     <x-form-movie.input name="photo_bg" :value="old('photo_bg', $movie->photo_bg)" required />
 
+                                    <x-form-movie.input name="trailer_url" :value="old('trailer_url', $movie->trailer_url)" required />
+
 
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Update</button>
