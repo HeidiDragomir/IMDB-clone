@@ -35,7 +35,11 @@ class AdminMovieController extends Controller
 
         Movie::create($attributes);
 
-        return redirect('/');
+        return redirect('/admin/dashboard/movies')
+            ->with([
+                'success' => 'Movie is Added!',
+                'color' => 'primary'
+            ]);
     }
 
     public function edit(Movie $movie)
@@ -57,12 +61,18 @@ class AdminMovieController extends Controller
 
         $movie->update($attributes);
 
-        return redirect('/admin/dashboard/movies')->with('success', 'Movie Updated!');
+        return redirect('/admin/dashboard/movies')->with([
+            'success' => 'Movie is Updated!',
+            'color' => 'primary'
+        ]);
     }
 
     public function destroy(Movie $movie)
     {
         $movie->delete();
-        return back()->with('success', 'Movie Deleted!');
+        return back()->with([
+            'success' => 'Movie is Deleted!',
+            'color' => 'primary'
+        ]);
     }
 }
