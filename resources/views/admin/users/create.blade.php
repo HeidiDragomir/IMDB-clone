@@ -2,39 +2,48 @@
     <x-admin-navbar />
 
     <section>
-        <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Edit Movie: {{ $movie->title }}</h1>
         <div class="pt-5 pb-5">
             <div class="container-xxl">
                 <div class="row d-flex justify-content-center h-100">
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-
+                        
                         <aside>
                             <ul class="list-unstyled">
+                                <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Add New User</h1>
                                 <li>
-                                    <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
+                                    <a href="/admin/dashboard/users" class="link-dark text-decoration-none">All Users</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/dashboard/movies/create" class="link-dark text-decoration-none">New Movie</a>
+                                    <a href="/admin/dashboard/users/create" class="link-dark text-decoration-none">New User</a>
                                 </li>
                             </ul>
                         </aside>
                     </div>
+
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                         <div class="card bg-light" style="border-radius: 15px;">
                             <div class="card-body p-5">
 
-                                <form method="POST" action="/admin/dashboard/movies/{{ $movie->id }}">
+                                <form method="POST" action="/admin/dashboard/users">
                                     @csrf
-                                    @method('PATCH')
 
-                                    <x-form-movie.input name="title" :value="old('title', $movie->title)" required />
+                                    <x-form-movie.input name="username" />
 
-                                    <x-form-movie.input name="slug" :value="old('slug', $movie->slug)" required />
+                                    <x-form-movie.input name="name" />
 
-                                    <x-form-movie.input name="year" :value="old('year', $movie->year)" required />
+                                    <x-form-movie.input name="email" />
+
+                                    <x-form-movie.input name="password" />
 
 
-                                    <div class="form-outline mb-4">
+                                    <div>
+                                    <label for="admin">Admin</label>
+                                    <input type="hidden" name="is_admin" value="0" />
+                                    <input type="checkbox" name="is_admin" value="1">                                
+                                    </div>
+
+
+                                    <!--  <div class="form-outline mb-4">
                                         <label class="form-label" for="category_id">Genre</label>
                                         <select name="category_id" id="category_id">
                                             @php
@@ -45,30 +54,32 @@
 
                                             @foreach ($categories as $category)
 
-                                            <option value="{{ $category->id }}" {{ old('category_id', $movie->category_id) == $category->id ? 'selected' : '' }}>{{ ucwords($category->name) }}</option>
+                                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ ucwords($category->name) }}</option>
 
                                             @endforeach
 
                                         </select>
 
-                                        <x-form-movie.error name='category_id' />
+                                        @error('category_id')
+                                        <p class="text-danger"><small>{{ $message }}</small></p>
+                                        @enderror
                                     </div>
 
                                     <div class="form-outline mb-4">
                                         <label class="form-label" for="body">Body</label>
-                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required>{{ old('body', $movie->body) }}</textarea>
+                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required>{{ old('body') }}</textarea>
 
                                         <x-form-movie.error name='body' />
 
                                     </div>
 
-                                    <x-form-movie.input name="photo_poster" :value="old('photo_poster', $movie->photo_poster)" required />
+                                    <x-form-movie.input name="photo_poster" />
 
-                                    <x-form-movie.input name="photo_bg" :value="old('photo_bg', $movie->photo_bg)" required />
+                                    <x-form-movie.input name="photo_bg" /> -->
 
-
+                                
                                     <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn btn-outline-success btn-lg">Update</button>
+                                        <button type="submit" class="btn btn btn-outline-success btn-lg">Add User</button>
                                     </div>
 
                                 </form>

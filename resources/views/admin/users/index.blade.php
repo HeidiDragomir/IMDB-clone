@@ -9,13 +9,13 @@
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
 
                         <aside>
-                            <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Manage Movies</h1>
+                            <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Manage Users</h1>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
+                                    <a href="/admin/dashboard/users" class="link-dark text-decoration-none">All Users</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/dashboard/movies/create" class="link-dark text-decoration-none">New Movie</a>
+                                    <a href="/admin/dashboard/users/create" class="link-dark text-decoration-none">New User</a>
                                 </li>
                             </ul>
                         </aside>
@@ -28,17 +28,17 @@
 
                                 <table class="table table-striped custab">
 
-                                    @foreach($movies as $movie)
+                                    @foreach($users as $user)
                                     <tr>
 
                                         <td class="align-middle">
-                                            <a href="/movies/{{ $movie->slug }}" class="link-dark text-decoration-none">{{ $movie->title }}</a>
+                                            <p class="link-dark text-decoration-none">{{ $user->username }}</p>
 
                                         </td>
                                         <td class=" text-center">
                                             <div class="container d-flex p-2 gap-1">
-                                                <a class='btn btn-info btn-xs' href="/admin/dashboard/movies/{{ $movie->id }}/edit">Edit</a>
-                                                <form method="POST" action="/admin/dashboard/movies/{{ $movie->id }}">
+                                                <a class='btn btn-info btn-xs' href="/admin/dashboard/users/{{ $user->id }}/edit">Edit</a>
+                                                <form method="POST" action="/admin/dashboard/users/{{ $user->id }}">
 
                                                     @csrf
                                                     @method('DELETE')
@@ -52,7 +52,7 @@
 
                                     @endforeach
                                 </table>
-                                {{ $movies->links() }}
+                                {{ $users->links() }}
 
                             </div>
                         </div>

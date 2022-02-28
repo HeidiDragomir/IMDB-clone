@@ -1,14 +1,15 @@
 <x-layout>
+    <x-admin-navbar />
 
     <section>
-        <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Publish New Movie</h1>
         <div class="pt-5 pb-5">
             <div class="container-xxl">
                 <div class="row d-flex justify-content-center h-100">
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-
+                        
                         <aside>
                             <ul class="list-unstyled">
+                                <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Publish New Movie</h1>
                                 <li>
                                     <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
                                 </li>

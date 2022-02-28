@@ -114,3 +114,8 @@
     min-height: 225px;
     max-height: 275px;
 }
+
+.buttonstyle {
+    color: red;
+    font-size: 50px;
+}
