@@ -15,20 +15,6 @@
     height: 70vh;
 }
 
-#btn-watchlist {
-    width: fit-content;
-}
-.btn-home {
-    width: fit-content;
-    position: absolute;
-    bottom: 0;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 1px 10px;
-    background-color: #f1f1f1;
-    color: black;
-    border-radius: 20%;
-}
 /* 
 ------- GRID -------
 */
@@ -107,6 +93,26 @@
 
 .brightness:hover {
     filter: brightness(130%);
+}
+
+/* ACTORS */
+
+.cast-image {
+    object-fit: cover;
+    height: 110px;
+    width: 110px;
+    border-radius: 20%;
+}
+
+/* RECOMMENDED GENRE MOVIES  AND TRAILER */
+
+.container__movie {
+    min-height: 320px;
+}
+
+.movie-recs-poster {
+    min-height: 225px;
+    max-height: 275px;
 }
 
 .buttonstyle {

@@ -8,7 +8,6 @@
                 <p><a class="btn btn-outline-light me-3" href="/admin/dashboard/movies">Movies</a></p>
                 <p><a class="btn btn-outline-light me-3" href="/admin/dashboard/users">Users</a></p>
                 <p><a class="btn btn-outline-light me-3" href="/admin/dashboard/comments">Comments</a></p>
-                <p><a class="btn btn-outline-light" href="/admin/dashboard/review">Reviews</a></p>
             </div>
         </div>
     </div>

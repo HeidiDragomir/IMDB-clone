@@ -14,7 +14,7 @@
               <input type="hidden" name="category" value="{{ request('category') }}">
               @endif
               <input type="search" name="search" class="form-control col-lg-auto fs-5 pt-2 pb-2 " placeholder="Search..." aria-label="Search" value="{{ request('search') }}" type="submit" style="border-radius: 5px 0px 0px 5px"> 
-              <button class="btn btn-dark" type="submit" style="border-radius: 0px 5px 5px 0px">Search</button>
+              <button class="btn btn-dark" type="submit" style="border-radius: 0px 5px 5px 0px"><ion-icon name="search-outline"></ion-icon></button>
           </form>    
         </div>
     </div>

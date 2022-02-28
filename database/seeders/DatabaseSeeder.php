@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Actor;
+use App\Models\ActorMovie;
 use App\Models\Category;
 use App\Models\Movie;
 use App\Models\User;
@@ -111,6 +113,136 @@ class DatabaseSeeder extends Seeder
             'name' => 'comedy',
             'slug' => 'comedy'
         ]);
+
+        /* ACTORS */
+
+        Actor::create([
+            'name' => 'Mads Mikkelsen',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/ntwPvV4GKGGHO3I7LcHMwhXfsw9.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Nikolaj Lie Kaas',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/oc0wzmAJILh21Gf0cVOwPTA8fMf.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Lars Bryggmann',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/2i7yTKEIDUOTU9dKRA3JTeI1mgQ.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Nicolas Bro',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/wZuHVrAh1Z4fbODAofnBoIWB2Tg.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Andrea Heick Gadeberg',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/zNh4HlmVZtVtmm55tyRlZEeEsuN.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Gustav Lindh',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/a92RvY2O8jn3MtNFi2dJMDr0NFc.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Tom Holland',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/2qhIDp44cAqP2clOgt2afQI07X8.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Zendaya',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/so3GqzuvXbYkNzQYNliAMB5rZzT.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Benedict Cumberbatch',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/fBEucxECxGLKVHBznO0qHtCGiMO.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jacob Batalon',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/53YhaL4xw4Sb1ssoHkeSSBaO29c.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jon Favreau',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/8MtRRnEHaBSw8Ztdl8saXiw1egP.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jamie Foxx',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/hPwCMEq6jLAidsXAX5BfoYgIfg2.jpg'
+        ]);
+
+         /* ACTORS TO MOVIE  */
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 1
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 2
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 3
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 4
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 5
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 6
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 6
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 7
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 8
+        ]);
+        
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 9
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 10
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 11
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 12
+        ]);
+
 
         Movie::create([
             'category_id' => $action->id,
