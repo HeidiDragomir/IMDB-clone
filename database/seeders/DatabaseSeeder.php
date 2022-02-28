@@ -146,6 +146,36 @@ class DatabaseSeeder extends Seeder
             'photo_url' => 'https://image.tmdb.org/t/p/w185/a92RvY2O8jn3MtNFi2dJMDr0NFc.jpg'
         ]);
 
+        Actor::create([
+            'name' => 'Tom Holland',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/2qhIDp44cAqP2clOgt2afQI07X8.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Zendaya',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/so3GqzuvXbYkNzQYNliAMB5rZzT.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Benedict Cumberbatch',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/fBEucxECxGLKVHBznO0qHtCGiMO.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jacob Batalon',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/53YhaL4xw4Sb1ssoHkeSSBaO29c.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jon Favreau',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/8MtRRnEHaBSw8Ztdl8saXiw1egP.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jamie Foxx',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/hPwCMEq6jLAidsXAX5BfoYgIfg2.jpg'
+        ]);
+
          /* ACTORS TO MOVIE  */
 
         ActorMovie::create([
@@ -176,6 +206,41 @@ class DatabaseSeeder extends Seeder
         ActorMovie::create([
             'movie_id' => 26,
             'actor_id' => 6
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 26,
+            'actor_id' => 6
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 7
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 8
+        ]);
+        
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 9
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 10
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 11
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 1,
+            'actor_id' => 12
         ]);
 
 
