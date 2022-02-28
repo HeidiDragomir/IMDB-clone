@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row py-3">
                 <div class="col-12 col-md-4 m-0 p-0">
-                    <div class="fade__in"><img src="{{ $movie->photo_poster }}" class="img-fluid p-2 rounded" alt="{{ $movie->title }}"></div>
+                    <div class="fade-in"><img src="{{ $movie->photo_poster }}" class="img-fluid p-2 rounded" alt="{{ $movie->title }}"></div>
                 </div>
                 <div class="col d-flex flex-column text-white justify-content-center pt-2 pt-lg-0">
                     <h2 class="font-weight-bold">{{ $movie->title }} <span class="text-muted small">({{ $movie->year }})</span></h2>
