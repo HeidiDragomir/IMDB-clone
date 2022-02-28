@@ -75,14 +75,14 @@
             </div>
             <div class="col">
                 <h6 class="text-dark pt-4" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;"><span style="background: rgb(255, 255, 255); padding-right: 14px;">Trailer</span></h6>
-                <div class="mb-3 d-flex justify-content-center"><iframe width="460" height="215" class="rounded" allowfullscreen src="https://www.youtube.com/embed/j9Okx5teGBQ" title=""></iframe></div>
+                <div class="mb-3 d-flex justify-content-center"><iframe width="460" height="215" class="rounded" allowfullscreen src="{{ $movie->trailer_url }}" title="YouTube video player"></iframe></div>
             </div>
         </div>
     </div>
     @endif
 
 
-    <!-- REVIEW MOVIE SECTION   -->     
+    <!-- REVIEW MOVIE SECTION   -->
     <div class="container">
         <h6 class="text-dark pt-4" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
             <span style="background: rgb(255, 255, 255); padding-right: 14px;">Reviews</span>
@@ -133,7 +133,7 @@
 
 
 
-                <!-- COMMENTS SECTION   -->  
+                <!-- COMMENTS SECTION   -->
                 @foreach ($movie->comments->reverse() as $comment)
                 @if($comment->approved == 1)
                 <div class="border border-gray-400 p-4 rounded bg-light mt-1" style="min-width: 80%;">

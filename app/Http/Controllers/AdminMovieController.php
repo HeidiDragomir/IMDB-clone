@@ -30,6 +30,7 @@ class AdminMovieController extends Controller
             'body' => 'required',
             'photo_poster' => 'required',
             'photo_bg' => 'required',
+            'trailer_url' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
 
@@ -56,6 +57,7 @@ class AdminMovieController extends Controller
             'body' => 'required',
             'photo_poster' => 'required',
             'photo_bg' => 'required',
+            'trailer_url' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
 
