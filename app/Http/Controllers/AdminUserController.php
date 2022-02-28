@@ -42,10 +42,10 @@ class AdminUserController extends Controller
 
         $user->update($attributes);
 
-        return redirect("/admin/dashboard/users")->with(
-            "success",
-            "User Updated!"
-        );
+        return redirect("/admin/dashboard/users")->with([
+            'success' => 'User is Updated!',
+            'color' => 'primary'
+        ]);
     }
 
     public function store()
@@ -60,11 +60,18 @@ class AdminUserController extends Controller
 
         User::create($attributes);
 
-        return redirect("/");
+        return redirect("/admin/dashboard/users")
+        ->with([
+            'success' => 'User is Added!',
+            'color' => 'primary'
+        ]);
     }
     public function destroy(User $user)
     {
         $user->delete();
-        return back()->with("success", "User Deleted!");
+        return back()->with([
+            'success' => 'User is Deleted!',
+            'color' => 'primary'
+        ]);
     }
 }
