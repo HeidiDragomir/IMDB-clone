@@ -45,7 +45,7 @@
             @foreach($movie->actors as $actor)
             <div class="text-center col-4 col-md-3 col-lg-2 mb-sm-2">
                 <div class="fade-in brightness">
-                    <img class="img-fluid cast-image" src="{{ $actor->photo_url }}" alt="{{ $actor->name }}">
+                    <img class="img-fluid cast-image rounded-circle" src="{{ $actor->photo_url }}" alt="{{ $actor->name }}" style="height: 110px;">
                     <p class="mt-2">{{ $actor->name }}</p>
                 </div>
             </div>
