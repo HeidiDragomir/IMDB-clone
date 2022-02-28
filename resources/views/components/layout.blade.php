@@ -50,8 +50,8 @@
                         </ul>
                     </div>
                     @else
-                    <a href="/login" class="btn btn-outline-success">Login</a>
-                    <a href="/register" class="btn btn-outline-primary ms-2">Signup</a>
+                    <a href="/login" class="btn btn-outline-primary">Login</a>
+                    <a href="/register" class="btn btn-primary ms-2">Signup</a>
                     @endauth
                 </div>
             </div>
