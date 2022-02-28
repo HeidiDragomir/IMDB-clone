@@ -75,8 +75,8 @@
             </div>
             <div class="col">
                 <h6 class="text-dark pt-4" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;"><span style="background: rgb(255, 255, 255); padding-right: 14px;">Trailer</span></h6>
-                <div class="mb-3 d-flex justify-content-center"><iframe width="460" height="215" class="rounded" allowfullscreen src="{{ $movie->trailer_url }}" title="YouTube video player"></iframe></div>
-            </div>
+                <div class="mb-3 d-flex justify-content-center"><iframe width="460" height="215" class="rounded" allowfullscreen src="@if ($movie->trailer_url == 1) https://www.youtube.com/embed/nO1BJMrIJ54 @else {{ $movie->trailer_url }} @endif" title="YouTube video player"></iframe></div>
+            </div>                                                                                                  
         </div>
     </div>
     @endif
