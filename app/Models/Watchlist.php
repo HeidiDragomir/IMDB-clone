@@ -11,12 +11,12 @@ class Watchlist extends Model
 
     protected $guarded = [];
 
-    public function movie()
+    public function movies()
     {
         return $this->belongsTo(Movie::class);
     }
 
-    public function user()
+    public function users()
     {
         return $this->belongsTo(User::class);
     }
