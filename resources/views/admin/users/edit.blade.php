@@ -32,9 +32,11 @@
                                     <x-form-movie.input name="name" :value="old('name', $user->name)" required />
 
                                     <x-form-movie.input name="email" :value="old('email', $user->email)" required />
+                                    
                                     <div>
                                     <label for="admin">Admin</label>
-                                    <input type="checkbox" id="scales" name="scales" checked>
+                                    <input type="hidden" name="is_admin" value="0" />
+                                    <input type="checkbox" name="is_admin" value="1">                                
                                     </div>
 
 
