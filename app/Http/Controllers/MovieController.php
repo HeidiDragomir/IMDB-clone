@@ -22,9 +22,12 @@ class MovieController extends Controller
 
     public function show(Movie $movie, Watchlist $watchlist)
     {
+        $categories = Movie::where('category_id', $movie->category_id)->inRandomOrder()->get();
+
         return view('movies.show', [
             'movie' => $movie,
-            'watchlist' => $watchlist
+            'watchlist' => $watchlist,
+            'categories' => $categories
         ]);
     }
 }
