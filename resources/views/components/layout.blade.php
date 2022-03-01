@@ -38,7 +38,7 @@
                     @auth
                     <!-- Checks if the user is sign in or a guest -->
                     <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             Welcome {{ auth()->user()->name }}!
                         </a>
 
