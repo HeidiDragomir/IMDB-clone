@@ -48,15 +48,18 @@ class AdminCommentController extends Controller
         $comment->save();
 
         return back()->with([
-            'success' => 'The comment is now published!',
+            'success' => 'Comment is now published!',
             'color' => 'primary'
-        ]);;
+        ]);
     }
 
 
     public function destroy(Comment $comment)
     {
         $comment->delete();
-        return back()->with('success', 'Comment Deleted!');
+        return back()->with([
+            'success' => 'Comment is Deleted!',
+            'color' => 'primary'
+        ]);
     }
 }

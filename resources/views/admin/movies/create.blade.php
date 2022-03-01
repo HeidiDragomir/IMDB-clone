@@ -6,7 +6,7 @@
             <div class="container-xxl">
                 <div class="row d-flex justify-content-center h-100">
                     <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                        
+
                         <aside>
                             <ul class="list-unstyled">
                                 <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Publish New Movie</h1>
@@ -67,6 +67,8 @@
                                     <x-form-movie.input name="photo_poster" />
 
                                     <x-form-movie.input name="photo_bg" />
+
+                                    <x-form-movie.input name="trailer_url" />
 
 
                                     <div class="d-flex justify-content-center">

@@ -21,10 +21,6 @@
   </div>
 
   <!-- GRID FOR POSTERS -->
-  <!-- <div class="container mt-3 border-bottom d-flex justify-content-between">
-        <p class="fs-3">Featured Movies</p>
-      </div> -->
-
   <div class="container mt-4">
     <div class="row text-center mt-4">
       @if($movies->count())
