@@ -38,7 +38,7 @@ Route::post("/admin/dashboard/comments", [
     AdminCommentController::class,
     "store",
 ])->middleware("admin");
-Route::post("/admin/dashboard/comments/approve", [
+Route::patch("/admin/dashboard/comments/{comment}", [
     AdminCommentController::class,
     "approval",
 ])->middleware("admin");
