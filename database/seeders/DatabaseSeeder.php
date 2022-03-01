@@ -911,7 +911,7 @@ class DatabaseSeeder extends Seeder
             'body' => 'When Patrizia Reggiani, an outsider from humble beginnings, marries into the Gucci family, her unbridled ambition begins to unravel the family legacy and triggers a reckless spiral of betrayal, decadence, revenge, and ultimately…murder.',
             'photo_poster' => 'https://image.tmdb.org/t/p/w500/vHla3Ej2m53rNmvmYkzvennLrKn.jpg',
             'photo_bg' => 'https://image.tmdb.org/t/p/original/jdLsmpqmP1wTdFUPtmxMnYgoifT.jpg',
-            'trailer_url' => 'https://youtu.be/rKOP6Jbxldo',
+            'trailer_url' => 'https://www.youtube.com/embed/rKOP6Jbxldo',
             'is_carousel' => 1
         ]);
 
