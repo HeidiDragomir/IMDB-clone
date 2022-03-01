@@ -1,4 +1,4 @@
-<div class="btn-group">
+<div class="btn-group mb-2">
     <button type="button" class="btn btn-dark btn-lg dropdown-toggle me-2" data-bs-toggle="dropdown" aria-expanded="false">
         {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Genre' }}
     </button>
