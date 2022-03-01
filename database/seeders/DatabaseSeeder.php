@@ -176,6 +176,268 @@ class DatabaseSeeder extends Seeder
             'photo_url' => 'https://image.tmdb.org/t/p/w185/hPwCMEq6jLAidsXAX5BfoYgIfg2.jpg'
         ]);
 
+        Actor::create([
+            'name' => 'Keanu Reeves',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/4D0PpNI0kmP58hgrwGC3wCjxhnm.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Carrie-Anne Moss',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/xD4jTA3KmVp5Rq3aHcymL9DUGjD.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Yahya Abdul-Mateen II',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/aBDebGZs2pAucyaK4EhHVJGm0Xu.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jessica Henwick',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/hRrEqDIWlov1FvYRmBN2vLaAxyl.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jonathan Groff',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/3kmnYKAzSc3Lp7iK5pcj97Hx9Cm.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Neil Patrick Harris',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/qZwbo23uaJU87NxE5RubbeeLTYh.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Daniel Stisen',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/jhyIFfBnM5nLhHdpFiGIW6qk9x5.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Olga Kent',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/yKhPELrlNuqXBYE0TRAMW87Zxx8.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Daniel Nehme',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/yoNTSC2vdMBiiE498n17QHf8zax.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Stanislav Yanevski',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/8vbMJ7qu9DLJcAyvA7G13hYNOFT.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Madeleine Vall',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/jACXQG2xHuFeIoxgGGhUbbrZNl1.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Natassia Malthe',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/9Nr5wmzQyxhexT16Bm3kxnQdEcG.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Lady Gaga',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/74rEzBPmxwqplvfMsXy9i2tCc24.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Adam Driver',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/fsbGQ1eZFgdsG1XnKlhNSvHsiGo.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jared Leto',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/ca3x0OfIKbJppZh8S1Alx3GfUZO.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jeremy Irons',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/w8Ct1q02Ht3sWdOSqfp3B85TzT.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Al Pacino',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Salma Hayek',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/3j8MpAjyopkAc8mbNiDeXyqBmcS.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Lewis Tan',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/ik347wakcZRfULiLbjGJpRcqSQz.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jessica McNamee',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/aAfaMEEqD8syHv5bLi5B3sccrM2.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Josh Lawson',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/Am9vM77uZd9bGODugwmWtOfzx6E.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Joe Taslim',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/lv85qMVXtofw7VsM7tKR36V0jAy.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Mehcad Brooks',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/etlE8YdFgYk6Nbe3uRQcc5uF0t2.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Matilda Kimber',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/oYuk3cxOFH4YZN1B5Xpnf34HOub.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Jason Statham',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/lldeQ91GwIVff43JBrpdbAAeYWj.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Holt McCallany',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/8NvOcP35qv5UHWEdpqAvQrKnQQz.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Scott Eastwood',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/2TofqgDl7ZlrAairMKKOSPITzka.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Jeffrey Donovan',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/wlDXfXpu6Uz32LUmbFzU8QPDoQH.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Josh Hartnett',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/9JS3PeypxTmHVXOnLCMRzJzySxO.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Eddie Marsan',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/uOBYS7vXORH6dRFR4bvF35cSu6B.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Alicia Silverstone',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/pyxqkP4i0ubVdoRe5hoiiiwkHkb.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Deirdre O\'Connell',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/6RYdyHbJxheX9aCwRg2bhPIIFrv.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Jennifer Mudge',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/gkRxvXH1AgmP8bcnPk7waQjgqxN.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Danny Chung',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/zDdG3uBSPQCBFGYMIhtbv3uKzUG.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'James Tupper',
+            'photo_url' => 'https://pecb.com/conferences/wp-content/uploads/2017/10/no-profile-picture.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Kameron Hood',
+            'photo_url' => 'https://pecb.com/conferences/wp-content/uploads/2017/10/no-profile-picture.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Jessica Chastain',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/lodMzLKSdrPcBry6TdoDsMN3Vge.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Lupita Nyong\'o',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/fGBB6Er4S6hb5zOp8xQtpMrxx5q.jpg'
+        ]);
+        Actor::create([
+            'name' => 'Penélope Cruz',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/tU2ATiHHBAKn4SHqKOagYqdpHiy.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Diane Kruger',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/aScr0aXsTzLIO6bkB82YUuYj4PT.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Fan Bingbing',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/tUpNOTyHtamAt8GlEXsBKvbaDqu.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Sebastian Stan',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/nKZgixTbHFXpkzzIpMFdLX98GYh.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Matt McClure',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/4LI5fjzqt3bG6l1cwEnxNvs5ZTV.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Mollie Hindle',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/ygNh5tJgtLz8nLm5gxZVxflqUPn.jpg'
+        ]);
+        Actor::create([
+            'name' => 'James Swanton',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/n7FXBEY2B56wiCR9IgqGOSNZjn1.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Nicola Wright',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/5FsJ2Oq0l6E8aB6n7PYl4zUyVT5.jpg'
+        ]);
+
+        Actor::create([
+            'name' => 'Nicholas Anscombe',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/heKvBj7qvdOADnMD0azgmSwuqZJ.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Michaela Longden',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/4nzQJ91bK9pUsTNSpBLSJh29eQD.jpg'
+        ]);
+        
+        // Actor::create([
+        //     'name' => 'Tom Holland',
+        //     'photo_url' => 'https://image.tmdb.org/t/p/w185/2qhIDp44cAqP2clOgt2afQI07X8.jpg'
+        // ]);
+        
+        Actor::create([
+            'name' => 'Mark Wahlberg',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/bTEFpaWd7A6AZVWOqKKBWzKEUe8.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Antonio Banderas',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/uqqgAdPfi1TmG3tfKfhsf20fHE6.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Sophia Ali',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/uqXn3Gp0FlsV5kDLwJ6FbeuJvx2.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Tati Gabrielle',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/r7qdYCmGemakfy0zsZWZ6DiGEDq.jpg'
+        ]);
+        
+        Actor::create([
+            'name' => 'Steven Waddington',
+            'photo_url' => 'https://image.tmdb.org/t/p/w185/gmlX5NNJI5HoNrK3RUPwBUmUgBW.jpg'
+        ]);
+        
         /* ACTORS TO MOVIE  */
 
         ActorMovie::create([
@@ -236,6 +498,281 @@ class DatabaseSeeder extends Seeder
         ActorMovie::create([
             'movie_id' => 1,
             'actor_id' => 12
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 8,
+            'actor_id' => 13
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 8,
+            'actor_id' => 14
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 8,
+            'actor_id' => 15
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 8,
+            'actor_id' => 16
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 8,
+            'actor_id' => 17
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 8,
+            'actor_id' => 18
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 9,
+            'actor_id' => 19
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 9,
+            'actor_id' => 20
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 9,
+            'actor_id' => 21
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 9,
+            'actor_id' => 22
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 9,
+            'actor_id' => 23
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 9,
+            'actor_id' => 24
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 12,
+            'actor_id' => 25
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 12,
+            'actor_id' => 26
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 12,
+            'actor_id' => 27
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 12,
+            'actor_id' => 28
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 12,
+            'actor_id' => 29
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 12,
+            'actor_id' => 30
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 14,
+            'actor_id' => 31
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 14,
+            'actor_id' => 32
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 14,
+            'actor_id' => 33
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 14,
+            'actor_id' => 34
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 14,
+            'actor_id' => 35
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 14,
+            'actor_id' => 36
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 22,
+            'actor_id' => 37
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 22,
+            'actor_id' => 38
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 22,
+            'actor_id' => 39
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 22,
+            'actor_id' => 40
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 22,
+            'actor_id' => 41
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 22,
+            'actor_id' => 42
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 2,
+            'actor_id' => 43
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 2,
+            'actor_id' => 44
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 2,
+            'actor_id' => 45
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 2,
+            'actor_id' => 46
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 2,
+            'actor_id' => 47
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 2,
+            'actor_id' => 48
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 4,
+            'actor_id' => 49
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 4,
+            'actor_id' => 50
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 4,
+            'actor_id' => 51
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 4,
+            'actor_id' => 52
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 4,
+            'actor_id' => 53
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 4,
+            'actor_id' => 54
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 5,
+            'actor_id' => 55
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 5,
+            'actor_id' => 56
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 5,
+            'actor_id' => 57
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 5,
+            'actor_id' => 58
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 5,
+            'actor_id' => 59
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 5,
+            'actor_id' => 60
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 7
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 61
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 62
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 63
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 64
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 65
+        ]);
+
+        ActorMovie::create([
+            'movie_id' => 13,
+            'actor_id' => 66
         ]);
 
 
@@ -1147,7 +1684,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'The Wolf of Wall Street',
             'year' => 2013,
             'body' => 'A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort\'s autobiography.',
-            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/pWHf4khOloNVfCxscsXFj3jj6gP.jpg',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/tBR1ORO2istuyQKbL47WkoFUj1a.jpg',
             'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/FzOdq23pNBJBW5zULFzEdjQXZD.jpg',
             'trailer_url' => '1'
         ]);
@@ -1268,7 +1805,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Whiplash',
             'year' => 2014,
             'body' => 'Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.',
-            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/6uSPcdGNA2A6vJmCagXkvnutegs.jpg',
             'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
             'trailer_url' => '1'
         ]);
