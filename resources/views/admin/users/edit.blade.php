@@ -14,7 +14,7 @@
                                     <a href="/admin/dashboard/users" class="link-dark text-decoration-none">All Users</a>
                                 </li>
                                 <li>
-                                    <a href="/admin/dashboard/user/create" class="link-dark text-decoration-none">New User</a>
+                                    <a href="/admin/dashboard/users/create" class="link-dark text-decoration-none">New User</a>
                                 </li>
                             </ul>
                         </aside>
@@ -32,59 +32,30 @@
                                     <x-form-movie.input name="name" :value="old('name', $user->name)" required />
 
                                     <x-form-movie.input name="email" :value="old('email', $user->email)" required />
-                                    
-                                    <div>
+
+                                    <!-- <x-form-movie.input name="is_admin" :value="old('is_admin', $user->is_admin)" required /> -->
+
+                                    <!-- <div>
                                     <label for="admin">Admin</label>
-                                    <input type="hidden" name="is_admin" value="0" />
-                                    <input type="checkbox" name="is_admin" value="1">                                
-                                    </div>
-
-
-                                    {{-- <div class="form-outline mb-4">
-                                        <label class="form-label" for="category_id">Genre</label>
-                                        <select name="category_id" id="category_id">
-                                            @php
-
-                                            $categories = \App\Models\Category::all();
-
-                                            @endphp
-
-                                            @foreach ($categories as $category)
-
-                                            <option value="{{ $category->id }}" {{ old('category_id', $movie->category_id) == $category->id ? 'selected' : '' }}>{{ ucwords($category->name) }}</option>
-
-                                            @endforeach
-
-                                        </select>
-
-                                        <x-form-movie.error name='category_id' />
-                                    </div> 
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="body">Body</label>
-                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required>{{ old('body', $movie->body) }}</textarea>
-
-                                        <x-form-movie.error name='body' />
-
-                                    </div>
-
-                                    <x-form-movie.input name="photo_poster" :value="old('photo_poster', $movie->photo_poster)" required />
-
-                                    <x-form-movie.input name="photo_bg" :value="old('photo_bg', $movie->photo_bg)" required />
-
-                                        --}}
-                                    <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn btn-outline-success btn-lg">Update</button>
-                                    </div>
-
-                                </form>
-
-
+                                    <input type="checkbox" name="is_admin" value="old('is_admin', $user->is_admin)" checked>                                
+                                    </div> -->
+                                    <label class="form-label" for="admin">Admin</label>
+                                    <select class="form-select form-select-lg" aria-label="Default select example" name="is_admin" id="admin">
+                                        <option value="0" @if($user->is_admin == 0) selected @endif>No</option>
+                                        <option value="1" @if($user->is_admin == 1) selected @endif>Yes</option>
+                                    </select>
+                            <div class="d-flex justify-content-center mt-4">
+                                <button type="submit" class="btn btn btn-outline-success btn-lg">Update</button>
                             </div>
+
+                            </form>
+
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
     </section>
