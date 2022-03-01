@@ -33,18 +33,10 @@ class AdminCommentController extends Controller
     }
 
 
-    public function approval(Request $request)
+    public function approval(Comment $comment)
     {
 
-        $comment = Comment::find($request->commentId);
-        $approveVal = $request->approved;
-        if ($approveVal == 'on') {
-            $approveVal = 1;
-        } else {
-            $approveVal = 0;
-        }
-
-        $comment->approved = $approveVal;
+        $comment->approved = '1';
         $comment->save();
 
         return back()->with([
