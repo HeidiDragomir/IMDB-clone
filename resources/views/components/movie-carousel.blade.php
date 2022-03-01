@@ -18,9 +18,9 @@
         
       <div class="carousel-item @if ($loop->first) active @endif slider-container">
         <img src="{{ $movie->photo_bg }}" alt="{{ $movie->title }} movie poster" class="slider-image" />
-        <div class="carousel-caption d-none d-md-block">
-            <a class="text-decoration-none text-white" href="/movies/{{ $movie->slug }}">
-          <h5>{{ $movie->title }}</h5>
+        <div class="carousel-caption">
+            <a class="text-decoration-none text-reset" href="/movies/{{ $movie->slug }}">
+          <h3 class="hvr-wobble-horizontal">{{ $movie->title }}</h3>
           <p>{{ $movie->year }}</p>
           </a>
         </div>
