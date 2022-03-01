@@ -35,50 +35,12 @@
 
                                     <x-form-movie.input name="password" />
 
-
-                                    <div>
-                                    <label for="admin">Admin</label>
-                                    <input type="hidden" name="is_admin" value="0" />
-                                    <input type="checkbox" name="is_admin" value="1">                                
-                                    </div>
-
-
-                                    <!--  <div class="form-outline mb-4">
-                                        <label class="form-label" for="category_id">Genre</label>
-                                        <select name="category_id" id="category_id">
-                                            @php
-
-                                            $categories = \App\Models\Category::all();
-
-                                            @endphp
-
-                                            @foreach ($categories as $category)
-
-                                            <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ ucwords($category->name) }}</option>
-
-                                            @endforeach
-
-                                        </select>
-
-                                        @error('category_id')
-                                        <p class="text-danger"><small>{{ $message }}</small></p>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-outline mb-4">
-                                        <label class="form-label" for="body">Body</label>
-                                        <textarea class="form-control form-control-lg" name="body" id="body" cols="30" rows="7" required>{{ old('body') }}</textarea>
-
-                                        <x-form-movie.error name='body' />
-
-                                    </div>
-
-                                    <x-form-movie.input name="photo_poster" />
-
-                                    <x-form-movie.input name="photo_bg" /> -->
-
-                                
-                                    <div class="d-flex justify-content-center">
+                                    <label class="form-label" for="admin">Admin</label>
+                                    <select class="form-select form-select-lg" aria-label="Default select example" name="is_admin" id="admin">
+                                        <option value="0" selected>No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                    <div class="d-flex justify-content-center mt-4">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Add User</button>
                                     </div>
 
