@@ -38,12 +38,36 @@
                                         <td class=" text-center">
                                             <div class="container d-flex p-2 gap-1">
                                                 <a class='btn btn-info btn-xs' href="/admin/dashboard/users/{{ $user->id }}/edit">Edit</a>
-                                                <form method="POST" action="/admin/dashboard/users/{{ $user->id }}">
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $user->id }}">
+                                                    Delete
+                                                </button>
+                                                <!-- Button trigger modal end-->
 
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button class="btn btn-danger btn-xs">Delete</button>
-                                                </form>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal-{{ $user->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                Are you sure you want to delete the user: <br><strong class="text-danger">{{ $user->username }}</strong>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <form method="POST" action="/admin/dashboard/users/{{ $user->id }}">
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Modal end-->
+
                                             </div>
 
 
