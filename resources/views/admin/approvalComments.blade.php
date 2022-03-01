@@ -57,17 +57,11 @@
                         @endif
                         <td class="align-middle">
 
-                            <form class="form-check form-check-inline" action="/admin/dashboard/comments/approve" method="POST">
+                            <form class="form-check form-check-inline" action="/admin/dashboard/comments/{{ $comment->id }}" method="POST">
                                 @csrf
-
-                                <input class="form-check-input" type="checkbox" name='approved'>
-
-                                @if($comment->approve == 1)
-                                <input type="checkbox" name='approved' checked>
-                                @endif
-
-                                <input type="hidden" name="commentId" value="{{$comment->id}}">
+                                @method('PATCH')
                                 <input class="btn btn-success" type="submit" value="Approve">
+
 
                             </form>
                         </td>

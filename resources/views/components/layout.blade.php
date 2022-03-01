@@ -28,7 +28,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Movies</a>
                     </li>
-
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="/watchlist">Watchlist</a>
+                    </li>
+                    @endauth
                 </ul>
 
                 <div class="d-flex">
@@ -40,7 +44,6 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="/watchlist">Watchlist</a></li>
                             @can('admin')
                             <li><a class="dropdown-item" href="/admin/dashboard">Admin</a></li>
                             @endcan
