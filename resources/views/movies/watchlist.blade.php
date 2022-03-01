@@ -5,7 +5,7 @@
         @if($watchlists->count())
         <div class="album">
             <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4 g-3">
                     @foreach ($watchlists as $watchlist)
                     <div class="col">
                         <div class="card shadow-sm">
@@ -15,7 +15,7 @@
                             <div class="card-body">
                                 <a class="text-decoration-none text-dark" href="/movies/{{ $watchlist->movie->slug }}">
                                     <h4 class="card-text mb-2">{{ $watchlist->movie->title }}</h4>
-                                    <p class="card-text mb-4">{{ \Illuminate\Support\Str::limit($watchlist->movie->body, 200, '...') }}</p>
+                                    <p class="card-text mb-4">{{ \Illuminate\Support\Str::limit($watchlist->movie->body, 40, '...') }}</p>
                                 </a>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
