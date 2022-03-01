@@ -1147,7 +1147,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'The Wolf of Wall Street',
             'year' => 2013,
             'body' => 'A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort\'s autobiography.',
-            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/pWHf4khOloNVfCxscsXFj3jj6gP.jpg',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/tBR1ORO2istuyQKbL47WkoFUj1a.jpg',
             'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/FzOdq23pNBJBW5zULFzEdjQXZD.jpg',
             'trailer_url' => '1'
         ]);
@@ -1268,7 +1268,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Whiplash',
             'year' => 2014,
             'body' => 'Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.',
-            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg',
+            'photo_poster' => 'https://www.themoviedb.org/t/p/w1280/6uSPcdGNA2A6vJmCagXkvnutegs.jpg',
             'photo_bg' => 'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg',
             'trailer_url' => '1'
         ]);
