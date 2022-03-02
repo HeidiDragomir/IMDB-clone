@@ -38,6 +38,7 @@ class AdminUserController extends Controller
             ], */
             "name" => "required",
             "email" => "required",
+            "is_admin" => "required",
         ]);
 
         $user->update($attributes);
@@ -51,13 +52,14 @@ class AdminUserController extends Controller
     public function store()
     {
         $attributes = request()->validate([
-            "username" => "required",
-            "password" => "required",
-            "name" => "required",
-            "email" => "required",
+            "username" => ['required', 'min:3', 'max:255', 'unique:users,username'],
+            "password" => ['required', 'min:7', 'max:255'],
+            "name" => ['required', 'max:255'],
+            "email" => ['required', 'max:255', 'unique:users,email'],
             "is_admin" => "required",
         ]);
 
+    
         User::create($attributes);
 
         return redirect("/admin/dashboard/users")
