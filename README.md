@@ -1,4 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+
+# Movieme, an imdb-clone by group 1
+
+## About the project
+
+This is an imdb-clone where you can register a user, login with your username and use the website as you like. As a user you can add movies to your own watchlist to keep track of your favourite movies. You can also leave reviews on movies so others can see what you thought. As a non-user you can still search for movies and browse all the movies and comments. The admins are able to approve comments, delete comments, add/ edit/ delete movies in the database, delete and edit users.
+
+## Built with
+
+- HTML
+- CSS/ Bootstrap
+- Docker
+- PHP/ Laravel
+- MySQL database
+- Heroku
+
+## Get started
+
+1. Clone the repository from Github
+2. Navigate to the root directory of the project and: RUN docker-compose up -d in your preferred CLI
+3. Navigate to http://127.0.0.1:8080/
+4. Login using the credentials in the docker-compose.yml file
+5. Set up MySql database by installing composer.
+6. Run "composer up"
+7. Open new tab and go to http://127.0.0.1
+8. Start your new tasks and edit, delete and mark as done if needed!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -62,3 +103,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ -->
