@@ -154,7 +154,7 @@
                             @endif
                         </header>
                         <div style="word-break: break-all;">
-                            <p class="fs-6">{{ $comment->body }}</p>
+                            <p class="fs-6 overflow-auto" style="max-height: 100px;">{{ $comment->body }}</p>
                         </div>
                         <div class="mt-3 pt-3 border-top border-gray-400">
                             <p class="fs-6 text-muted">Posted

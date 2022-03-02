@@ -40,7 +40,7 @@
 
                             </td>
 
-                            <td class="align-middle">
+                            <td class="align-middle overflow-auto" style="max-width: 500px;">
                                 {{ $comment->body }}
 
                             </td>
