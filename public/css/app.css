@@ -144,3 +144,14 @@
     border-color: #000000;
     box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
 }
+
+/* Admin page */
+
+.custom {
+    width: 110px;
+}
+
+.column-admin {
+    width: 25%;
+}
+
