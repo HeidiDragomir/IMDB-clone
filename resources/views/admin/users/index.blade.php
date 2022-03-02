@@ -1,32 +1,35 @@
 <x-layout>
     <x-admin-navbar />
-    
+
     <section>
-        
+        <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Manage Users</h1>
+
         <div class="pt-5 pb-5">
-            <div class="container-xl">
-                <div class="row d-flex justify-content-center h-100">
-                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="container-xxl">
+                <div class="row d-flex justify-content-start h-100">
+                    <div class="column-admin col-12 col-md-9 col-lg-7 col-xl-6">
 
                         <aside>
-                            <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Manage Users</h1>
+
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="/admin/dashboard/users" class="link-dark text-decoration-none">All Users</a>
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/users">All Users</a>
+
                                 </li>
-                                <li>
-                                    <a href="/admin/dashboard/users/create" class="link-dark text-decoration-none">New User</a>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/users/create">New User</a>
+
                                 </li>
                             </ul>
                         </aside>
                     </div>
-                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="col-12 col-md-7 col-lg-6 col-xl-5">
                         <div class="card bg-light" style="border-radius: 15px;">
                             <div class="card-body p-5">
 
                                 <!-- Table -->
 
-                                <table class="table table-striped custab">
+                                <table class="table w-100 table-striped custab">
 
                                     @foreach($users as $user)
                                     <tr>
@@ -35,8 +38,8 @@
                                             <p class="link-dark text-decoration-none">{{ $user->username }}</p>
 
                                         </td>
-                                        <td class=" text-center">
-                                            <div class="container d-flex p-2 gap-1 justify-content-end">
+                                        <td class="text-center">
+                                            <div class="container d-flex p-2 gap-3 justify-content-end">
                                                 <a class='btn btn-info btn-xs' href="/admin/dashboard/users/{{ $user->id }}/edit">Edit</a>
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $user->id }}">
