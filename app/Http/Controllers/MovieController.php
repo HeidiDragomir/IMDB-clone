@@ -16,6 +16,7 @@ class MovieController extends Controller
             'movies' => Movie::latest()->filter(
                 request(['search', 'category']))
                 ->orderBy('year', 'desc')
+                ->orderBy('title', 'desc')
                 ->paginate(8)->withQueryString()
         ]);
     }
