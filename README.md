@@ -3,7 +3,7 @@
 
 ## About the project
 
-This is an imdb-clone where you can register a user, login with your username and use the website as you like. As a user you can add movies to your own watchlist to keep track of your favourite movies. You can also leave reviews on movies so others can see what you thought. As a non-user you can still search for movies and browse all the movies and comments. The admins are able to approve comments, delete comments, add/ edit/ delete movies in the database, delete and edit users.
+This is an imdb-clone where you can register a user, login with your username and use the website as you like. As a user you can add movies to your own watchlist to keep track of your favourite movies. You can also leave reviews on movies so others can see what you thought. As a non-user you can still search for movies and browse all the movies and comments. The admins are able to approve comments, delete comments, add/ edit/ delete movies in the database, delete and edit users. As an admin you can also make regular users admins.
 
 ## Built with
 
