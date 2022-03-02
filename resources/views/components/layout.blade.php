@@ -25,14 +25,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Movies</a>
+                        <a class="nav-link {{ request()->is('/', 'admin/dashboard/users/create') ? 'active' : '' }}" href="/">Movies</a>
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="/watchlist">Watchlist</a>
+                        <a class="nav-link {{ request()->is('watchlist') ? 'active' : '' }}" href="/watchlist">Watchlist</a>
                     </li>
                     @endauth
                 </ul>
