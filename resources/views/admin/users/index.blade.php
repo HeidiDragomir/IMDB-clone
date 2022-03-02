@@ -36,7 +36,7 @@
 
                                         </td>
                                         <td class=" text-center">
-                                            <div class="container d-flex p-2 gap-1">
+                                            <div class="container d-flex p-2 gap-1 justify-content-end">
                                                 <a class='btn btn-info btn-xs' href="/admin/dashboard/users/{{ $user->id }}/edit">Edit</a>
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $user->id }}">
