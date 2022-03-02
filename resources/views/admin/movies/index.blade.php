@@ -1,19 +1,22 @@
 <x-layout>
     <x-admin-navbar />
     <section>
+        <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Manage Movies</h1>
         <div class="pt-5 pb-5">
-            <div class="container-xl">
-                <div class="row d-flex justify-content-center h-100">
-                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="container-xxl">
+                <div class="row d-flex justify-content-start h-100">
+                    <div class="column-admin col-12 col-md-9 col-lg-7 col-xl-6">
 
                         <aside>
-                            <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Manage Movies</h1>
+
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies">All Movies</a>
+
                                 </li>
-                                <li>
-                                    <a href="/admin/dashboard/movies/create" class="link-dark text-decoration-none">New Movie</a>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies/create">New Movie</a>
+
                                 </li>
                             </ul>
                         </aside>
@@ -23,14 +26,14 @@
                             <div class="card-body p-5">
 
                                 <!-- Table -->
-                                <table class="table table-striped custab">
+                                <table class="table w-100 table-striped custab">
                                     @foreach($movies as $movie)
                                     <tr>
                                         <td class="align-middle">
                                             <a href="/movies/{{ $movie->slug }}" class="link-dark text-decoration-none">{{ $movie->title }}</a>
                                         </td>
                                         <td class="text-center">
-                                            <div class="container d-flex justify-content-end p-2 gap-1">
+                                            <div class="container d-flex justify-content-end p-2 gap-3">
                                                 <a class='btn btn-info btn-xs' href="/admin/dashboard/movies/{{ $movie->id }}/edit">Edit</a>
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $movie->id }}">
