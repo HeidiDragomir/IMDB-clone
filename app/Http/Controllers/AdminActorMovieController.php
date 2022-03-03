@@ -24,7 +24,7 @@ class AdminActorMovieController extends Controller
 
         ActorMovie::create($attributes);
 
-        return redirect('/admin/dashboard/create-connection')
+        return redirect('/admin/dashboard/createconnection')
             ->with([
                 'success' => 'Connection is Created!',
                 'color' => 'primary'
