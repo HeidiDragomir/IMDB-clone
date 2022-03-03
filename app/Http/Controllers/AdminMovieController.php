@@ -12,9 +12,13 @@ class AdminMovieController extends Controller
     public function index()
     {
         return view('admin.movies.index', [
-            'movies' => Movie::latest()->paginate(20)->withQueryString()
+        'movies' => Movie::latest()->
+            orderBy('title', 'asc')->
+            orderBy('year', 'asc')->
+            paginate(20)->withQueryString()
         ]);
     }
+
 
     public function create()
     {

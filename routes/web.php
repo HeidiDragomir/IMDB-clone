@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminCommentController;
 use App\Http\Controllers\AdminMovieController;
+use App\Http\Controllers\AdminActorController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\MovieCommentsController;
 use App\Http\Controllers\MovieController;
@@ -152,6 +153,44 @@ Route::get("/admin/dashboard/users/{user}", [
 
 Route::delete("/admin/dashboard/users/{user}", [
     AdminUserController::class,
+    "destroy",
+])->middleware("admin");
+
+
+// Actors
+
+Route::get("/admin/dashboard/actors", [
+    AdminActorController::class,
+    "index",
+])->middleware("admin");
+
+Route::post("/admin/dashboard/actors", [
+    AdminActorController::class,
+    "store",
+])->middleware("admin");
+
+Route::get("/admin/dashboard/actors/create", [
+    AdminActorController::class,
+    "create",
+])->middleware("admin");
+
+Route::get("/admin/dashboard/actors/{actor}/edit", [
+    AdminActorController::class,
+    "edit",
+])->middleware("admin");
+
+Route::patch("/admin/dashboard/actors/{actor}", [
+    AdminActorController::class,
+    "update",
+])->middleware("admin");
+
+Route::get("/admin/dashboard/actors/{actor}", [
+    AdminActorController::class,
+    "update",
+])->middleware("admin");
+
+Route::delete("/admin/dashboard/actors/{actor}", [
+    AdminActorController::class,
     "destroy",
 ])->middleware("admin");
 
