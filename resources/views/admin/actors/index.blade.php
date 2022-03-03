@@ -22,6 +22,9 @@
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/actors/create">New Actor</a>
 
                                 </li>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/createconnection">Connect</a>
+                                </li>
                             </ul>
                         </aside>
                     </div>
