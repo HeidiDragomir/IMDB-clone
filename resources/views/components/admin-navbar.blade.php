@@ -6,6 +6,7 @@
             
             <div class="d-flex">
                 <p><a class="btn btn-outline-light me-3 {{ request()->is('admin/dashboard/movies', 'admin/dashboard/movies/*') ? 'active' : '' }}" href="/admin/dashboard/movies">Movies</a></p>
+                <p><a class="btn btn-outline-light me-3 {{ request()->is('admin/dashboard/actors', 'admin/dashboard/actors/*') ? 'active' : '' }}" href="/admin/dashboard/actors">Actors</a></p>
                 <p><a class="btn btn-outline-light me-3 {{ request()->is('admin/dashboard/users', 'admin/dashboard/users/*') ? 'active' : '' }}" href="/admin/dashboard/users">Users</a></p>
                 <p><a class="btn btn-outline-light me-3 {{ request()->is('admin/dashboard/comments') ? 'active' : '' }}" href="/admin/dashboard/comments">Comments</a></p>
             </div>
