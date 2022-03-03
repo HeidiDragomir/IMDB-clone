@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminCommentController;
 use App\Http\Controllers\AdminMovieController;
 use App\Http\Controllers\AdminActorController;
+use App\Http\Controllers\AdminActorMovieController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\MovieCommentsController;
 use App\Http\Controllers\MovieController;
@@ -27,14 +28,8 @@ Route::get("/", [MovieController::class, "index"])->name("home");
 Route::get("/movies/{movie:slug}", [MovieController::class, "show"]);
 
 // Comments
-Route::post("/movies/{movie:slug}/comments", [
-    MovieCommentsController::class,
-    "store",
-]);
-Route::get("/admin/dashboard/comments", [
-    AdminCommentController::class,
-    "index",
-])->middleware("admin");
+Route::post("/movies/{movie:slug}/comments", [MovieCommentsController::class, "store",]);
+Route::get("/admin/dashboard/comments", [AdminCommentController::class, "index",])->middleware("admin");
 Route::post("/admin/dashboard/comments", [
     AdminCommentController::class,
     "store",
@@ -194,12 +189,14 @@ Route::delete("/admin/dashboard/actors/{actor}", [
     "destroy",
 ])->middleware("admin");
 
-/* Route::get("/categories/{category}", function (Category $category) {
-    return view("categories", [
-        "movies" => $category->movies,
-    ]);
-});
+Route::get("/admin/dashboard/actors/createconnection", [
+    AdminActorMovieController::class,
+    "index",
+]);
 
-Route::get("/genre", function () {
-    return view("genre");
-}); */
+/* Route::post("/admin/dashboard/actors/create-connection", [
+    AdminActorMovieController::class,
+    "store",
+])->middleware("admin"); */
+
+
