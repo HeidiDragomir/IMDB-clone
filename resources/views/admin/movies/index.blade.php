@@ -16,11 +16,12 @@
                             <ul class="list-unstyled">
                                 <li>
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies">All Movies</a>
-
                                 </li>
                                 <li class="mt-2">
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies/create">New Movie</a>
-
+                                </li>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/createconnection">Connect</a>
                                 </li>
                             </ul>
                         </aside>
@@ -33,6 +34,9 @@
                                 <table class="table w-100 table-striped custab">
                                     @foreach($movies as $movie)
                                     <tr>
+                                    <td class="align-middle">
+                                            <a href="/movies/{{ $movie->id }}" class="link-dark text-decoration-none">{{ $movie->id }}</a>
+                                        </td>
                                         <td class="align-middle">
                                             <a href="/movies/{{ $movie->slug }}" class="link-dark text-decoration-none">{{ $movie->title }}</a>
                                         </td>

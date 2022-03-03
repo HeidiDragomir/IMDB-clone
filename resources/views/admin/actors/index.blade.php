@@ -22,6 +22,9 @@
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/actors/create">New Actor</a>
 
                                 </li>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/createconnection">Connect</a>
+                                </li>
                             </ul>
                         </aside>
                     </div>
@@ -33,6 +36,9 @@
                                 <table class="table w-100 table-striped custab">
                                     @foreach($actors as $actor)
                                     <tr>
+                                    <td class="align-middle">
+                                            <a href="/actors/{{ $actor->id }}" class="link-dark text-decoration-none">{{ $actor->id }}</a>
+                                        </td>
                                         <td class="align-middle">
                                             <a href="/actors/{{ $actor->name }}" class="link-dark text-decoration-none">{{ $actor->name }}</a>
                                         </td>

@@ -35,7 +35,7 @@ class WatchlistController extends Controller
         $id = Auth::user()->id;
         $watchlists = Watchlist::where('user_id', $id)
             ->orderBy('created_at', 'desc')
-            ->paginate(6)->withQueryString();
+            ->paginate(8)->withQueryString();
 
         return view('movies.watchlist', [
             'watchlists' => $watchlists

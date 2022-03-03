@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('actors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('photo_url');
+            $table->text('photo_url');
             $table->timestamps();
         });
     }
