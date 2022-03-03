@@ -189,14 +189,17 @@ Route::delete("/admin/dashboard/actors/{actor}", [
     "destroy",
 ])->middleware("admin");
 
-Route::get("/admin/dashboard/actors/createconnection", [
+
+// Admin actor movie connection
+
+Route::get("/admin/dashboard/createconnection", [
     AdminActorMovieController::class,
     "index",
 ]);
 
-/* Route::post("/admin/dashboard/actors/create-connection", [
+Route::post("/admin/dashboard/createconnection", [
     AdminActorMovieController::class,
     "store",
-])->middleware("admin"); */
+])->middleware("admin"); 
 
 

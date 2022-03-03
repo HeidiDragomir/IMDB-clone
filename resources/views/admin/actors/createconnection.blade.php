@@ -20,8 +20,7 @@
 
                                 </li>
                                 <li class="mt-2">
-                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/actors/create">New Actor</a>
-
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies">All Movies</a>
                                 </li>
                             </ul>
                         </aside>
@@ -31,7 +30,7 @@
                         <div class="card bg-light" style="border-radius: 15px;">
                             <div class="card-body p-5">
 
-                                <form method="POST" action="/admin/dashboard/actors/create-connection">
+                                <form method="POST" action="/admin/dashboard/createconnection">
                                     @csrf
 
                                     <x-form-movie.input name="actor_id" required/>

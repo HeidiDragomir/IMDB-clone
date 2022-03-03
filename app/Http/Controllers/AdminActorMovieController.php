@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\ActorMovie;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+
 
 class AdminActorMovieController extends Controller
 {
@@ -13,7 +15,7 @@ class AdminActorMovieController extends Controller
     }
 
 
-    /* public function store()
+    public function store()
     {
         $attributes = request()->validate([
             'actor_id' => 'required',
@@ -22,10 +24,10 @@ class AdminActorMovieController extends Controller
 
         ActorMovie::create($attributes);
 
-        return redirect('/admin/dashboard/actors/create-connection')
+        return redirect('/admin/dashboard/create-connection')
             ->with([
                 'success' => 'Connection is Created!',
                 'color' => 'primary'
             ]);
-    } */
+    } 
 }
