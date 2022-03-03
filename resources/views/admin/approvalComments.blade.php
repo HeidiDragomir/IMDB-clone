@@ -2,11 +2,17 @@
     <x-admin-navbar />
 
     <section>
-        <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-center">Manage Comments</h1>
+        <div class="container">
+            <h2 class="text-dark pt-5" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
+                <span style="background: rgb(255, 255, 255); padding-right: 14px;">Manage Comments</span>
+            </h2>
+        </div>
 
+        @if($comments->count())
         <div class="pt-5 pb-5">
             <div class="container-lg table-responsive-lg">
 
+                
                 <table class="table mx-auto w-auto table-striped custab">
                     <thead>
                         <tr>
@@ -45,7 +51,7 @@
 
                             </td>
                             <td class="align-middle">
-                                {{ $comment->created_at }}
+                                {{ $comment->created_at->diffForHumans() }}
                             </td>
                             @if ($comment->approved == true)
                             <td class="align-middle">
@@ -84,6 +90,11 @@
                 </table>
             </div>
         </div>
+        @else
+            <div class="container">
+            <p class="mt-5 text-center"><strong>No comments. Please check back later.</strong></p>
+            </div>
+        @endif
 
 
 
