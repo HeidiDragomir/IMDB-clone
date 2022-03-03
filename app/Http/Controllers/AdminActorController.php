@@ -13,8 +13,7 @@ class AdminActorController extends Controller
     {
         return view('admin.actors.index', [
         'actors' => Actor::orderBy('name', 'asc')->
-            orderBy('name', 'asc')->
-            paginate(20)->withQueryString()
+        paginate(20)->withQueryString()
         ]);
     }
 
