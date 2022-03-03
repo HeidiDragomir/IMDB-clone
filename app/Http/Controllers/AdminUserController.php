@@ -12,9 +12,7 @@ class AdminUserController extends Controller
     {
         //
         return view("admin.users.index", [
-            "users" => User::latest()
-                ->paginate(20)
-                ->withQueryString(),
+            "users" => User::orderBy("username", "asc")->paginate(20)->withQueryString(),
         ]);
     }
 
