@@ -156,3 +156,8 @@
     width: 25%;
 }
 
+.status-btn {
+    border-radius: 30px;
+    background-color: rgb(195, 228, 195);
+    
+}
