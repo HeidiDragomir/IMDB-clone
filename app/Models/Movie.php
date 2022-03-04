@@ -49,4 +49,8 @@ class Movie extends Model
     public function actors() {
         return $this->belongsToMany(Actor::class);
     }
+
+    public function mlists() {
+        return $this->belongsToMany(Mlist::class);
+    }
 }

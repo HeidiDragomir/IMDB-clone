@@ -12,6 +12,7 @@
                     </ul>
                     <h5 class="font-weight-bold pt-3">Overview</h5>
                     <p>{{$movie->body}}</p>
+
                     @if($watchlist->where('movie_id', $movie->id)->exists())
                     <form method="POST" action="/movie/watchlist/delete">
                         @csrf
@@ -22,7 +23,7 @@
                         </button>
                     </form>
                     @else
-                    <form method="POST" action="/movie/{{ $movie->slug}}/add">
+                    <form method="POST" action="/movie/{{ $movie->slug }}/add">
                         @csrf
                         <input type="hidden" name="movie_id" value="{{ $movie->id }}">
                         <button class="btn btn-warning btn-md d-flex align-items-center" type="submit">
@@ -30,10 +31,36 @@
                         </button>
                     </form>
                     @endif
+
+                    @if(!$lists->isEmpty())
+                    <div class="dropdown">
+                        <button class="btn btn-light d-flex align-items-center dropdown-toggle mt-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <ion-icon name="add-outline" class="me-2"></ion-icon> Add to List 
+</button>
+                        
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            @foreach($lists as $list)
+                            <form method="POST" action="/lists/{{ $movie->slug }}/add">
+                                @csrf
+                                <input type="hidden" name="mlist_id" value="{{ $list->id }}">
+                                <input type="hidden" name="movie_id" value="{{ $movie->id }}">
+                                <li class="nav-item">
+                                    <button class="dropdown-item" type="submit">{{ $list->title }}</button>
+                                </li>
+                            </form>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @else
+                    <a href="/lists/settings/create" class="text-reset"> <button class="btn btn-light btn-md d-flex align-items-center mt-3">Create new List</button></a>
+                    @endif
+
+
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- ACTORS SECTION -->
     @if(!$movie->actors->isEmpty())

@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminMovieController;
 use App\Http\Controllers\AdminActorController;
 use App\Http\Controllers\AdminActorMovieController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\MlistController;
+use App\Http\Controllers\MlistMovieController;
 use App\Http\Controllers\MovieCommentsController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
@@ -201,5 +203,53 @@ Route::post("/admin/dashboard/createconnection", [
     AdminActorMovieController::class,
     "store",
 ])->middleware("admin"); 
+
+
+// List settings
+
+Route::get("/lists/settings", [
+    MlistController::class,
+    "index",
+])->middleware("auth");
+
+Route::get("lists/settings/create", [
+    MlistController::class,
+    "create",
+])->middleware("auth");
+
+Route::post("/lists/settings/create", [
+    MlistController::class,
+    "store",
+])->middleware("auth");
+
+Route::get("/lists/settings/{list}/edit", [
+    MlistController::class,
+    "edit",
+])->middleware("auth");
+
+Route::patch("/lists/settings/{list}/update", [
+    MlistController::class,
+    "update",
+])->middleware("auth");
+
+Route::get("/lists/settings/{list}", [
+    MlistController::class,
+    "update",
+])->middleware("auth");
+
+Route::delete("/lists/settings/{list}", [
+    MlistController::class,
+    "destroy",
+])->middleware("auth");
+
+
+Route::post("/lists/{movie:slug}/add", [
+    MlistMovieController::class,
+    "store",
+])->middleware("auth");
+
+Route::get("/lists", [MlistController::class, "show"])->middleware(
+    "auth"
+);
 
 
