@@ -12,7 +12,7 @@
         <div class="pt-5 pb-5">
             <div class="container-lg table-responsive-lg">
 
-                
+
                 <table class="table mx-auto w-auto table-striped custab">
                     <thead>
                         <tr>
@@ -55,11 +55,11 @@
                             </td>
                             @if ($comment->approved == true)
                             <td class="align-middle">
-                                <span class="p-1 leading-5 font-semibold inline-flex text-xs rounded bg-secondary text-light">Approved</span>
+                                <span class="status-btn px-3 pb-1 leading-5 font-semibold inline-flex text-xs">Approved</span>
                             </td>
                             @else
                             <td class="align-middle">
-                                <span class="p-1 leading-5 font-semibold inline-flex text-xs rounded bg-warning text-light">Waiting</span>
+                                <span class="status-btn pb-1 px-3 leading-5 font-semibold inline-flex text-xs bg-warning">Waiting</span>
                             </td>
                             @endif
                             <td class="align-middle">
@@ -91,9 +91,9 @@
             </div>
         </div>
         @else
-            <div class="container">
+        <div class="container">
             <p class="mt-5 text-center"><strong>No comments. Please check back later.</strong></p>
-            </div>
+        </div>
         @endif
 
 
