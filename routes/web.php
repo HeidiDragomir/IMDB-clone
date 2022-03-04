@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminCommentController;
 use App\Http\Controllers\AdminMovieController;
+use App\Http\Controllers\AdminActorController;
+use App\Http\Controllers\AdminActorMovieController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\MovieCommentsController;
 use App\Http\Controllers\MovieController;
@@ -26,14 +28,8 @@ Route::get("/", [MovieController::class, "index"])->name("home");
 Route::get("/movies/{movie:slug}", [MovieController::class, "show"]);
 
 // Comments
-Route::post("/movies/{movie:slug}/comments", [
-    MovieCommentsController::class,
-    "store",
-]);
-Route::get("/admin/dashboard/comments", [
-    AdminCommentController::class,
-    "index",
-])->middleware("admin");
+Route::post("/movies/{movie:slug}/comments", [MovieCommentsController::class, "store",]);
+Route::get("/admin/dashboard/comments", [AdminCommentController::class, "index",])->middleware("admin");
 Route::post("/admin/dashboard/comments", [
     AdminCommentController::class,
     "store",
@@ -155,12 +151,55 @@ Route::delete("/admin/dashboard/users/{user}", [
     "destroy",
 ])->middleware("admin");
 
-/* Route::get("/categories/{category}", function (Category $category) {
-    return view("categories", [
-        "movies" => $category->movies,
-    ]);
-});
 
-Route::get("/genre", function () {
-    return view("genre");
-}); */
+// Actors
+
+Route::get("/admin/dashboard/actors", [
+    AdminActorController::class,
+    "index",
+])->middleware("admin");
+
+Route::post("/admin/dashboard/actors", [
+    AdminActorController::class,
+    "store",
+])->middleware("admin");
+
+Route::get("/admin/dashboard/actors/create", [
+    AdminActorController::class,
+    "create",
+])->middleware("admin");
+
+Route::get("/admin/dashboard/actors/{actor}/edit", [
+    AdminActorController::class,
+    "edit",
+])->middleware("admin");
+
+Route::patch("/admin/dashboard/actors/{actor}", [
+    AdminActorController::class,
+    "update",
+])->middleware("admin");
+
+Route::get("/admin/dashboard/actors/{actor}", [
+    AdminActorController::class,
+    "update",
+])->middleware("admin");
+
+Route::delete("/admin/dashboard/actors/{actor}", [
+    AdminActorController::class,
+    "destroy",
+])->middleware("admin");
+
+
+// Admin actor movie connection
+
+Route::get("/admin/dashboard/createconnection", [
+    AdminActorMovieController::class,
+    "index",
+]);
+
+Route::post("/admin/dashboard/createconnection", [
+    AdminActorMovieController::class,
+    "store",
+])->middleware("admin"); 
+
+

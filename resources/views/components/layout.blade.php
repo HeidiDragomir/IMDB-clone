@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Movieme is a source for movie content. Find ratings and reviews for the newest movies.">
+    <meta name="keywords" content="Movieme, Movie, Movies, rating, reviews">
+    <meta name="author" content="Chas Academy Students">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieMe</title>
-    <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://icon-library.com/images/m-icon-png/m-icon-png-2.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -23,14 +25,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Movies</a>
+                        <a class="nav-link {{ request()->is('/', 'admin/dashboard/users/create') ? 'active' : '' }}" href="/">Movies</a>
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="/watchlist">Watchlist</a>
+                        <a class="nav-link {{ request()->is('watchlist') ? 'active' : '' }}" href="/watchlist">Watchlist</a>
                     </li>
                     @endauth
                 </ul>
@@ -39,7 +38,7 @@
                     @auth
                     <!-- Checks if the user is sign in or a guest -->
                     <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             Welcome {{ auth()->user()->name }}!
                         </a>
 
@@ -54,8 +53,8 @@
                         </ul>
                     </div>
                     @else
-                    <a href="/login" class="btn btn-outline-primary">Login</a>
-                    <a href="/register" class="btn btn-primary ms-2">Signup</a>
+                    <a href="/login" class="btn btn-outline-dark">Login</a>
+                    <a href="/register" class="btn btn-dark ms-2">Signup</a>
                     @endauth
                 </div>
             </div>

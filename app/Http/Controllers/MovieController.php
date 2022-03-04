@@ -13,9 +13,10 @@ class MovieController extends Controller
     public function index()
     {
         return view('movies.index', [
-            'movies' => Movie::latest()->filter(
+            'movies' => Movie::filter(
                 request(['search', 'category']))
                 ->orderBy('year', 'desc')
+                ->orderBy('title', 'desc')
                 ->paginate(8)->withQueryString()
         ]);
     }

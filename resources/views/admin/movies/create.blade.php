@@ -2,19 +2,26 @@
     <x-admin-navbar />
 
     <section>
+    <div class="container">
+            <h2 class="text-dark pt-5" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
+                <span style="background: rgb(255, 255, 255); padding-right: 14px;">Publish New Movies</span>
+            </h2>
+        </div>
         <div class="pt-5 pb-5">
             <div class="container-xxl">
-                <div class="row d-flex justify-content-center h-100">
-                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="row d-flex justify-content-start h-100">
+                    <div class="column-admin col-12 col-md-9 col-lg-7 col-xl-6">
 
                         <aside>
                             <ul class="list-unstyled">
-                                <h1 class="mb-4 mt-5 pb-2 pb-md-0 mb-md-5 text-left">Publish New Movie</h1>
-                                <li>
-                                    <a href="/admin/dashboard/movies" class="link-dark text-decoration-none">All Movies</a>
+                                
+                            <li>
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies">All Movies</a>
+
                                 </li>
-                                <li>
-                                    <a href="/admin/dashboard/movies/create" class="link-dark text-decoration-none">New Movie</a>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies/create">New Movie</a>
+
                                 </li>
                             </ul>
                         </aside>
