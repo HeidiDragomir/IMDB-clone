@@ -33,9 +33,54 @@
                                 <form method="POST" action="/admin/dashboard/createconnection">
                                     @csrf
 
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="name">Actor</label>
+                                        <select name="actor_id" id="name">
+                                            @php
+
+                                            $actors = \App\Models\Actor::all();
+
+                                            @endphp
+
+                                            @foreach ($actors as $act)
+
+                                            <option value="{{ $act->id }}">{{ ucwords($act->name) }}</option>
+
+                                            @endforeach
+
+                                        </select>
+
+                                        @error('name')
+                                        <p class="text-danger"><small>{{ $message }}</small></p>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="title">Movie</label>
+                                        <select name="movie_id" id="title">
+                                            @php
+
+                                            $movies = \App\Models\Movie::all();
+
+                                            @endphp
+
+                                            @foreach ($movies as $movie)
+
+                                            <option value="{{ $movie->id }}">{{ ucwords($movie->title) }}</option>
+
+                                            @endforeach
+
+                                        </select>
+
+                                        @error('name')
+                                        <p class="text-danger"><small>{{ $message }}</small></p>
+                                        @enderror
+                                    </div>
+<!-- 
+    
                                     <x-form-movie.input name="actor_id" required/>
 
-                                    <x-form-movie.input name="movie_id" required/>
+                                    <x-form-movie.input name="movie_id" required/> -->
 
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Create</button>
