@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('watchlist') ? 'active' : '' }}" href="/watchlist">Watchlist</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('watchlist') ? 'active' : '' }}" href="/lists">Lists</a>
+                    </li>
                     @endauth
                 </ul>
 
@@ -46,6 +49,11 @@
                             @can('admin')
                             <li><a class="dropdown-item" href="/admin/dashboard">Admin</a></li>
                             @endcan
+                            @auth
+                            <li class="nav-item">
+                                <a class="dropdown-item" href="/lists/settings">Settings</a>
+                            </li>
+                            @endauth
                             <form method="POST" action="/logout">
                                 @csrf
                                 <li><button class="dropdown-item" type="submit">Log Out</button></li>
