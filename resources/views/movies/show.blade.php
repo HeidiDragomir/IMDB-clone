@@ -13,7 +13,8 @@
                     <h5 class="font-weight-bold pt-3">Overview</h5>
                     <p>{{$movie->body}}</p>
 
-                    @if($watchlist->where('movie_id', $movie->id)->exists())
+                    @if($watchlist->where('movie_id', $movie->id)->exists() && auth()->check())
+                
                     <form method="POST" action="/movie/watchlist/delete">
                         @csrf
                         @method('DELETE')
@@ -32,12 +33,13 @@
                     </form>
                     @endif
 
-                    @if(!$lists->isEmpty())
+                    
+                    @if($lists)
                     <div class="dropdown">
                         <button class="btn btn-light d-flex align-items-center dropdown-toggle mt-3" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                        <ion-icon name="add-outline" class="me-2"></ion-icon> Add to List 
-</button>
-                        
+                            <ion-icon name="add-outline" class="me-2"></ion-icon> Add to List
+                        </button>
+
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             @foreach($lists as $list)
                             <form method="POST" action="/lists/{{ $movie->slug }}/add">
@@ -54,6 +56,7 @@
                     @else
                     <a href="/lists/settings/create" class="text-reset"> <button class="btn btn-light btn-md d-flex align-items-center mt-3">Create new List</button></a>
                     @endif
+                    
 
 
                 </div>
