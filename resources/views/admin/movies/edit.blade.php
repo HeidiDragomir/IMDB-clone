@@ -16,11 +16,12 @@
                             <ul class="list-unstyled">
                                 <li>
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies">All Movies</a>
-
                                 </li>
                                 <li class="mt-2">
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies/create">New Movie</a>
-
+                                </li>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/createconnection">Connect</a>
                                 </li>
                             </ul>
                         </aside>

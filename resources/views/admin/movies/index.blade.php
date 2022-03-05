@@ -34,9 +34,6 @@
                                 <table class="table w-100 table-striped custab">
                                     @foreach($movies as $movie)
                                     <tr>
-                                    <td class="align-middle">
-                                            <a href="/movies/{{ $movie->id }}" class="link-dark text-decoration-none">{{ $movie->id }}</a>
-                                        </td>
                                         <td class="align-middle">
                                             <a href="/movies/{{ $movie->slug }}" class="link-dark text-decoration-none">{{ $movie->title }}</a>
                                         </td>
