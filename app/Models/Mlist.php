@@ -11,10 +11,7 @@ class Mlist extends Model
     protected $guarded = [];
 
     public function movies(){
-        return $this->belongsToMany(Movie::class);
+        return $this->belongsToMany(Movie::class)->withTimestamps();
     }
 
-    public function users(){
-        return $this->belongsToMany(User::class);
-    }
 }
