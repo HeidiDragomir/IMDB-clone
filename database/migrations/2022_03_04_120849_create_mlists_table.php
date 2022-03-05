@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('mlists', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->unsignedBigInteger('user_id')->onDelete('cascade');
             $table->string('title');
             $table->timestamps();
