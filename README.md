@@ -32,11 +32,12 @@ DB_USERNAME=root
 DB_PASSWORD=example  
 
 --- 
-4. Install composer with "composer install" in the root of the project
-5. Run "composer update"
+4. Attach a shell and then install composer with "composer install" in the root of the project (cd movieme)
+5. Run "composer update" <---?
 6. Attach a shell in the container to the correct project folder
-7. Run "php artisan migrate:fresh --seed" 
-8. Run "php artisan serve --host 0.0.0.0 --port 8000"
-9. Open the URL http://127.0.0.1:8000/ in the browser
-10. Open http://127.0.0.1:8080/ in the browser to view the db
-11. Login using the credentials in the docker-compose.yml file
+7. Open http://127.0.0.1:8080/ in the browser to view the db, log in using the credentials stated in the third step and when inside create a new database called movieme.
+9. Run "php artisan migrate:fresh --seed" 
+10. Generate your application encryption key using `php artisan key:generate`.
+11. Run "php artisan serve --host 0.0.0.0 --port 8000"
+12. Open the URL http://127.0.0.1:8000/ in the browser
+13. Tada!
