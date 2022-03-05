@@ -26,8 +26,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", [MovieController::class, "index"])->name("home")->middleware("guest");
-Route::get("/movies/{movie:slug}", [MovieController::class, "show"])->middleware("guest");
+Route::get("/", [MovieController::class, "index"])->name("home");
+Route::get("/movies/{movie:slug}", [MovieController::class, "show"]);
 
 // Comments
 Route::post("/movies/{movie:slug}/comments", [MovieCommentsController::class, "store",])->middleware("auth");
