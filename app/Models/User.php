@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Watchlist::class);
     }
+
+    public function mlists()
+    {
+        return $this->hasMany(Mlist::class);
+    }
 }

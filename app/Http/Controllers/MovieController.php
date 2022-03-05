@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mlist;
 use App\Models\Movie;
 use App\Models\Watchlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule as ValidationRule;
 
 
@@ -14,7 +16,8 @@ class MovieController extends Controller
     {
         return view('movies.index', [
             'movies' => Movie::filter(
-                request(['search', 'category']))
+                request(['search', 'category'])
+            )
                 ->orderBy('year', 'desc')
                 ->orderBy('title', 'desc')
                 ->paginate(8)->withQueryString()
@@ -23,12 +26,25 @@ class MovieController extends Controller
 
     public function show(Movie $movie, Watchlist $watchlist)
     {
-        $categories = Movie::where('category_id', $movie->category_id)->inRandomOrder()->get();
+        if (Auth::check()) {
+            $categories = Movie::where('category_id', $movie->category_id)->inRandomOrder()->get();
+            $lists = Mlist::where('user_id', Auth::user()->id)->orderBy('title', 'asc')->get();
 
-        return view('movies.show', [
-            'movie' => $movie,
-            'watchlist' => $watchlist,
-            'categories' => $categories
-        ]);
+            return view('movies.show', [
+                'movie' => $movie,
+                'watchlist' => $watchlist,
+                'lists' => $lists,
+                'categories' => $categories
+            ]);
+        } else {
+            $categories = Movie::where('category_id', $movie->category_id)->inRandomOrder()->get();
+
+            return view('movies.show', [
+                'movie' => $movie,
+                'watchlist' => $watchlist,
+                'lists' => false,
+                'categories' => $categories
+            ]);
+        }
     }
 }
