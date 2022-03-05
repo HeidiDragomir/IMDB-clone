@@ -14,7 +14,7 @@
                 <a class="text-decoration-none" href="/movies/{{ $watchlist->movie->slug }}">
                     <div class="fade-in">
                         <img src="{{ $watchlist->movie->photo_poster }}" class="img-fluid rounded" alt="{{ $watchlist->movie->title }}">
-                        <h5 class="my-2 pb-3 link-dark">{{ dd($watchlist->movie) }}</p>
+                        <h5 class="my-2 pb-3 link-dark">{{ $watchlist->movie->title }}</p>
                             <small class="text-muted position-absolute bottom-0 start-0 ms-3">{{ $watchlist->created_at->diffForHumans() }}</small>
                             <form class="position-absolute top-0 end-0 me-3 mt-1" method="POST" action="/movie/watchlist/delete">
                                 @csrf
