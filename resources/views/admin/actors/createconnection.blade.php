@@ -14,13 +14,14 @@
 
                         <aside>
                             <ul class="list-unstyled">
-                                
                             <li>
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/actors">All Actors</a>
-
                                 </li>
                                 <li class="mt-2">
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/movies">All Movies</a>
+                                </li>
+                                <li class="mt-2">
+                                    <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/createconnection">Connect</a>
                                 </li>
                             </ul>
                         </aside>
@@ -34,8 +35,8 @@
                                     @csrf
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="name">Actor</label>
-                                        <select name="actor_id" id="name">
+                                        <label class="form-label form-control-lg d-flex" for="name">Actor</label>
+                                        <select class="form-control form-control-lg" name="actor_id" id="name">
                                             @php
 
                                             $actors = \App\Models\Actor::all();
@@ -56,8 +57,8 @@
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <label class="form-label" for="title">Movie</label>
-                                        <select name="movie_id" id="title">
+                                        <label class="form-label form-control-lg d-flex" for="title">Movie</label>
+                                        <select class="form-control form-control-lg" name="movie_id" id="title">
                                             @php
 
                                             $movies = \App\Models\Movie::all();

@@ -36,11 +36,8 @@
                                 <table class="table w-100 table-striped custab">
                                     @foreach($actors as $actor)
                                     <tr>
-                                    <td class="align-middle">
-                                            <a href="/actors/{{ $actor->id }}" class="link-dark text-decoration-none">{{ $actor->id }}</a>
-                                        </td>
                                         <td class="align-middle">
-                                            <a href="/actors/{{ $actor->name }}" class="link-dark text-decoration-none">{{ $actor->name }}</a>
+                                            <p class="link-dark text-decoration-none">{{ $actor->name }}</p>
                                         </td>
                                         <td class="text-center">
                                             <div class="container d-flex justify-content-end p-2 gap-3">
