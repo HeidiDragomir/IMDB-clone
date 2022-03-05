@@ -13,20 +13,38 @@ class MlistMovieController extends Controller
 
     public function store(Request $request)
     {
-    
-        $attributes = request()->validate([
-            'mlist_id' => 'required',
-            'movie_id' => 'required'
-        ]);
+        if(MlistMovie::where('movie_id', $request->movie_id)->where('mlist_id', $request->mlist_id)->exists()) {
+            return back()->with([
+                'success' => 'Movie is already in that list!',
+                'color' => 'danger'
+            ]);  
+        } else {
+            $attributes = request()->validate([
+                'mlist_id' => 'required',
+                'movie_id' => 'required'
+            ]);
+            MlistMovie::create($attributes);
+            return back()->with([
+                'success' => 'Movie added to list!',
+                'color' => 'success'
+            ]);
+        }   
+    }
 
-        $attributes['user_id'] = $request->user()->id;
+   
 
-        MlistMovie::create($attributes);
+    public function destroy()
+    {
 
-        return back()->with([
-            'success' => 'Movie added to list!',
-            'color' => 'success'
-        ]);
+        $movieId = request('movie_id');
+        $mlistId = request('mlist_id');
 
+        
+            MlistMovie::where('movie_id', $movieId)->where('mlist_id', $mlistId)->delete();
+                return back()->with([
+                'success' => 'Movie Deleted From List!',
+                'color' => 'danger'
+                ]);   
+        
     }
 }

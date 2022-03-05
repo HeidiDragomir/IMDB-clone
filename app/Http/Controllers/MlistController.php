@@ -24,12 +24,9 @@ class MlistController extends Controller
     {
         $id = Auth::user()->id;
         $lists = Mlist::where('user_id', $id)
-            ->orderBy('created_at', 'desc')
-            ->paginate(8)->withQueryString();
+            ->get();
 
-        return view('lists.index', [
-            'lists' => $lists,
-        ]);
+        return view('lists.index', compact('lists'));
     }
 
 
