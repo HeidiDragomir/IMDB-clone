@@ -14,7 +14,7 @@
                     <p>{{$movie->body}}</p>
 
                     <div class="d-flex">
-                        @if($watchlist->where('movie_id', $movie->id)->exists() && auth()->check())
+                        @if($watchlist->where('movie_id', $movie->id)->where('user_id', auth()->user()->id)->exists() && auth()->check())
                         <form method="POST" action="/movie/watchlist/delete">
                             @csrf
                             @method('DELETE')

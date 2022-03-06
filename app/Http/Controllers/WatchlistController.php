@@ -14,15 +14,22 @@ class WatchlistController extends Controller
     public function store(Request $request, Movie $movie)
     {
         //Checks if movie already in watchlist
-        if (Watchlist::where('movie_id', $request->movie_id)->exists()) {
+        $id = Auth::user()->id;
+        if (Watchlist::where('user_id', $id)->where('movie_id', $request->movie_id)->exists()) {
             return back()->with([
                 'success' => 'Movie Already in Watchlist!',
                 'color' => 'danger'
             ]);
         } else { //If not it adds the movie
-            $movie->watchlists()->create([
-                'user_id' => $request->user()->id,
+    
+            $attributes = request()->validate([
+                'movie_id' => 'required',
             ]);
+            
+            $attributes['user_id'] = $request->user()->id;
+
+            Watchlist::create($attributes);
+            
             return back()->with([
                 'success' => 'Movie Added To Watchlist!',
                 'color' => 'success'
@@ -57,7 +64,8 @@ class WatchlistController extends Controller
                 'color' => 'danger'
             ]);
         } else {
-            Watchlist::where('movie_id', $movieId)->delete();
+            $id = Auth::user()->id;
+            Watchlist::where('movie_id', $movieId, 'user_id', $id)->delete();
             return back()->with([
                 'success' => 'Movie Deleted From Watchlist!',
                 'color' => 'danger'
