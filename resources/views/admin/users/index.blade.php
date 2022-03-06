@@ -9,7 +9,7 @@
         </div>
 
         <div class="pt-5 pb-5">
-            <div class="container-xxl">
+            <div class="container">
                 <div class="row d-flex justify-content-start h-100">
                     <div class="column-admin col-12 col-md-9 col-lg-7 col-xl-6">
 
