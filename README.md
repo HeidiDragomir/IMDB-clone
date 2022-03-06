@@ -1,6 +1,6 @@
 # Movieme, an imdb-clone by group 1
 
-![](/project/movieme/public/img/mockup.png)
+![](/public/img/mockup.png)
 
 
 
