@@ -16,7 +16,7 @@ class MovieCarousel extends Component
     public function render()
     {
         return view('components.movie-carousel', [
-            'movies' => Movie::where('is_carousel', 1)->get()->sortBy("year")
+            'movies' => Movie::where('is_carousel', 1)->inRandomOrder()->get()
         ]);
     }
 }
