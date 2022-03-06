@@ -14,7 +14,8 @@
                     <p>{{$movie->body}}</p>
 
                     <div class="d-flex">
-                        @if($watchlist)
+                        @auth
+                        @if($watchlist->where('movie_id', $movie->id)->count())
                         <form method="POST" action="/movie/watchlist/delete">
                             @csrf
                             @method('DELETE')
@@ -24,6 +25,7 @@
                             </button>
                         </form>
                         @else
+                        
                         <form method="POST" action="/movie/{{ $movie->slug }}/add">
                             @csrf
                             <input type="hidden" name="movie_id" value="{{ $movie->id }}">
@@ -32,6 +34,14 @@
                             </button>
                         </form>
                         @endif
+                        @else
+                        <a href="/login" class="text-reset text-decoration-none">
+                            <button class="btn btn-warning btn-md d-flex align-items-center me-4" type="submit">
+                                <ion-icon name="add-outline" class="me-2"></ion-icon> Add to Watchlist
+                            </button>
+                        </a>
+                        @endauth
+                     
 
 
                         @if($lists)
@@ -54,7 +64,7 @@
                             </ul>
                         </div>
                         @else
-                        <a href="/lists/settings/create" class="text-reset">
+                        <a href="/lists/settings/create" class="text-reset text-decoration-none">
                             <button class="btn btn-light btn-md d-flex align-items-center">
                                 <ion-icon name="add-outline" class="me-2"></ion-icon> Create New List
                             </button>

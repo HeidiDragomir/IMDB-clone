@@ -65,7 +65,7 @@ class WatchlistController extends Controller
             ]);
         } else {
             $id = Auth::user()->id;
-            Watchlist::where('movie_id', $movieId, 'user_id', $id)->delete();
+            Watchlist::where('movie_id', $movieId)->where('user_id', $id)->delete();
             return back()->with([
                 'success' => 'Movie Deleted From Watchlist!',
                 'color' => 'danger'

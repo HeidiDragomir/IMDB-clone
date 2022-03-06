@@ -24,19 +24,19 @@ class MovieController extends Controller
         ]);
     }
 
-    public function show(Movie $movie, Watchlist $watchlist)
+    public function show(Movie $movie)
     {
         if (Auth::check()) {
             $categories = Movie::where('category_id', $movie->category_id)->inRandomOrder()->get();
             $lists = Mlist::where('user_id', Auth::user()->id)->orderBy('title', 'asc')->get();
+            $watchlist = Watchlist::where('user_id', Auth::user()->id)->get();
 
             if (!$lists->count()) {
                 $lists = false;
             }
 
-            if (!$watchlist->count()) {
-                $watchlist=false;
-            }
+           
+
 
             return view('movies.show', [
                 'movie' => $movie,
