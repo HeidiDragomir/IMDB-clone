@@ -32,7 +32,7 @@
                         <a class="nav-link {{ request()->is('watchlist') ? 'active' : '' }}" href="/watchlist">Watchlist</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('watchlist') ? 'active' : '' }}" href="/lists">Lists</a>
+                        <a class="nav-link {{ request()->is('lists') ? 'active' : '' }}" href="/lists">Lists</a>
                     </li>
                     @endauth
                 </ul>
