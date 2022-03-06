@@ -18,7 +18,7 @@ Live version: http://moviemeuno.herokuapp.com/
 
 ## Get started
 
-1. Create a new folder (with docker-compose.yml and DockerFile) or clone this GitHub repo to an existing folder with docker-compose & Dockerfile. 
+1. Create a new folder (with docker-compose.yml, DockerFile and an empty folder called "project") and then clone this GitHub repo into the project map. 
 2. Navigate to the root directory of the project and: RUN docker-compose up in your preferred CLI
 3. Fix db in .env file using this:
 
