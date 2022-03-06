@@ -15,8 +15,7 @@ class MlistController extends Controller
     {
         $id = Auth::user()->id;
         return view('lists.settings.index', [
-            'lists' => Mlist::where('user_id', $id)->orderBy('title', 'asc')->
-        paginate(2)->withQueryString()
+            'lists' => Mlist::where('user_id', $id)->orderBy('title', 'asc')->paginate(2)->withQueryString()
         ]);
     }
 
@@ -37,8 +36,8 @@ class MlistController extends Controller
 
     public function store(Request $request)
     {
-        
-    
+
+
         $attributes = request()->validate([
             'title' => ['required', 'min:3', 'max:40']
         ]);
@@ -63,7 +62,7 @@ class MlistController extends Controller
     {
         $attributes = request()->validate([
             'title' => ['required', 'min:3', 'max:40'],
-          
+
         ]);
 
         $list->update($attributes);
@@ -82,5 +81,4 @@ class MlistController extends Controller
             'color' => 'primary'
         ]);
     }
-
 }

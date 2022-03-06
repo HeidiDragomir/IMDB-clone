@@ -57,14 +57,14 @@ class AdminUserController extends Controller
             "is_admin" => "required",
         ]);
 
-    
+
         User::create($attributes);
 
         return redirect("/admin/dashboard/users")
-        ->with([
-            'success' => 'User is Added!',
-            'color' => 'primary'
-        ]);
+            ->with([
+                'success' => 'User is Added!',
+                'color' => 'primary'
+            ]);
     }
     public function destroy(User $user)
     {

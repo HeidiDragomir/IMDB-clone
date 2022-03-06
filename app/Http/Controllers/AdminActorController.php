@@ -12,8 +12,7 @@ class AdminActorController extends Controller
     public function index()
     {
         return view('admin.actors.index', [
-        'actors' => Actor::orderBy('name', 'asc')->
-        paginate(20)->withQueryString()
+            'actors' => Actor::orderBy('name', 'asc')->paginate(20)->withQueryString()
         ]);
     }
 
@@ -25,9 +24,9 @@ class AdminActorController extends Controller
 
     public function store()
     {
-        
 
-    // ... 
+
+        // ... 
         $attributes = request()->validate([
             'name' => 'required',
             'photo_url' => 'required',

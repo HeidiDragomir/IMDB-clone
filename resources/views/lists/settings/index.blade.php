@@ -74,9 +74,9 @@
                                     @endforeach
                                 </table>
                                 @else
-                                    <p>
-                                        No lists. Please add a list!
-                                    </p>
+                                <p>
+                                    No lists. Please add a list!
+                                </p>
                                 @endif
                                 {{ $lists->links() }}
 

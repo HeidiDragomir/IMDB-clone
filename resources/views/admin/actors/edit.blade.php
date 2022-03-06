@@ -38,7 +38,7 @@
 
                                     <x-form-movie.input name="photo_url" :value="old('photo_url', $actor->photo_url)" />
 
-                                   
+
                                     <div class="d-flex justify-content-center mt-4">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Update</button>
                                     </div>

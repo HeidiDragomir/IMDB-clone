@@ -13,11 +13,11 @@ class MlistMovieController extends Controller
 
     public function store(Request $request)
     {
-        if(MlistMovie::where('movie_id', $request->movie_id)->where('mlist_id', $request->mlist_id)->exists()) {
+        if (MlistMovie::where('movie_id', $request->movie_id)->where('mlist_id', $request->mlist_id)->exists()) {
             return back()->with([
                 'success' => 'Movie is already in that list!',
                 'color' => 'danger'
-            ]);  
+            ]);
         } else {
             $attributes = request()->validate([
                 'mlist_id' => 'required',
@@ -28,10 +28,10 @@ class MlistMovieController extends Controller
                 'success' => 'Movie added to list!',
                 'color' => 'success'
             ]);
-        }   
+        }
     }
 
-   
+
 
     public function destroy()
     {
@@ -39,12 +39,11 @@ class MlistMovieController extends Controller
         $movieId = request('movie_id');
         $mlistId = request('mlist_id');
 
-        
-            MlistMovie::where('movie_id', $movieId)->where('mlist_id', $mlistId)->delete();
-                return back()->with([
-                'success' => 'Movie Deleted From List!',
-                'color' => 'danger'
-                ]);   
-        
+
+        MlistMovie::where('movie_id', $movieId)->where('mlist_id', $mlistId)->delete();
+        return back()->with([
+            'success' => 'Movie Deleted From List!',
+            'color' => 'danger'
+        ]);
     }
 }

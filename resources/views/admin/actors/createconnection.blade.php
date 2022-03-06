@@ -2,7 +2,7 @@
     <x-admin-navbar />
 
     <section>
-    <div class="container">
+        <div class="container">
             <h2 class="text-dark pt-5" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
                 <span style="background: rgb(255, 255, 255); padding-right: 14px;">Create connection</span>
             </h2>
@@ -14,7 +14,7 @@
 
                         <aside>
                             <ul class="list-unstyled">
-                            <li>
+                                <li>
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/actors">All Actors</a>
                                 </li>
                                 <li class="mt-2">
@@ -77,7 +77,7 @@
                                         <p class="text-danger"><small>{{ $message }}</small></p>
                                         @enderror
                                     </div>
-<!-- 
+                                    <!-- 
     
                                     <x-form-movie.input name="actor_id" required/>
 
