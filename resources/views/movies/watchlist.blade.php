@@ -31,7 +31,7 @@
             @endforeach
             {{ $watchlists->links() }} <!-- RENDER THE PAGINATIONS LINKS -->
             @else
-            <p class="my-4"><strong>No movies added. Please check back later.</strong></p>
+            <p class="my-4">No movies added. Please check back later.</p>
             @endif
         </div>
     </div>
