@@ -41,7 +41,8 @@ class User extends Authenticatable
         $this->attributes["password"] = bcrypt($password);
     }
 
-    public function movies() {
+    public function movies()
+    {
         return $this->hasMany(Movie::class);
     }
 

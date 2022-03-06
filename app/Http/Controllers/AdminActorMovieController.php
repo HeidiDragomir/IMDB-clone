@@ -29,5 +29,5 @@ class AdminActorMovieController extends Controller
                 'success' => 'Connection is Created!',
                 'color' => 'primary'
             ]);
-    } 
+    }
 }

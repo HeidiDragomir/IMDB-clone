@@ -2,7 +2,7 @@
     <x-admin-navbar />
 
     <section>
-    <div class="container">
+        <div class="container">
             <h2 class="text-dark pt-5" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
                 <span style="background: rgb(255, 255, 255); padding-right: 14px;">Add New Actors</span>
             </h2>
@@ -14,7 +14,7 @@
 
                         <aside>
                             <ul class="list-unstyled">
-                            <li>
+                                <li>
                                     <a class="btn btn-secondary me-3 custom" href="/admin/dashboard/actors">All Actors</a>
                                 </li>
                                 <li class="mt-2">
@@ -34,9 +34,9 @@
                                 <form method="POST" action="/admin/dashboard/actors">
                                     @csrf
 
-                                    <x-form-movie.input name="name" required/>
+                                    <x-form-movie.input name="name" required />
 
-                                    <x-form-movie.input name="photo_url" required/>
+                                    <x-form-movie.input name="photo_url" required />
 
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Publish</button>

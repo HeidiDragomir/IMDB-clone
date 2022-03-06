@@ -1,6 +1,6 @@
 <x-layout>
     <section>
-    <div class="container">
+        <div class="container">
             <h2 class="text-dark pt-5" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
                 <span style="background: rgb(255, 255, 255); padding-right: 14px;">Add New Lists</span>
             </h2>
@@ -12,8 +12,8 @@
 
                         <aside>
                             <ul class="list-unstyled">
-                                
-                            <li>
+
+                                <li>
                                     <a class="btn btn-secondary me-3 custom" href="/lists/settings">All Lists</a>
 
                                 </li>
@@ -31,7 +31,7 @@
                                 <form method="POST" action="/lists/settings/create">
                                     @csrf
 
-                                    <x-form-movie.input name="title" required/>
+                                    <x-form-movie.input name="title" required />
 
                                     <div class="d-flex justify-content-center">
                                         <button type="submit" class="btn btn btn-outline-success btn-lg">Add</button>

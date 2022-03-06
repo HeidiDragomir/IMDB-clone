@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\Input;
 
 class WatchlistController extends Controller
 {
-    
+
     public function store(Request $request, Movie $movie)
     {
         //Checks if movie already in watchlist
@@ -18,15 +18,15 @@ class WatchlistController extends Controller
             return back()->with([
                 'success' => 'Movie Already in Watchlist!',
                 'color' => 'danger'
-            ]);     
+            ]);
         } else { //If not it adds the movie
             $movie->watchlists()->create([
-            'user_id' => $request->user()->id,
+                'user_id' => $request->user()->id,
             ]);
             return back()->with([
-            'success' => 'Movie Added To Watchlist!',
-            'color' => 'success'
-            ]); 
+                'success' => 'Movie Added To Watchlist!',
+                'color' => 'success'
+            ]);
         }
     }
 
@@ -43,27 +43,25 @@ class WatchlistController extends Controller
     }
 
 
-    
+
     public function destroy()
     {
         // Deletes by movie->id from show blade or from watchlist->id from watchlist blade
         $movieId = request('movie_id');
         $id = request('id');
 
-        if(isset($id)) {
+        if (isset($id)) {
             Watchlist::find($id)->delete();
-                return back()->with([
+            return back()->with([
                 'success' => 'Movie Deleted From Watchlist!',
                 'color' => 'danger'
-                ]);   
+            ]);
         } else {
             Watchlist::where('movie_id', $movieId)->delete();
-                return back()->with([
+            return back()->with([
                 'success' => 'Movie Deleted From Watchlist!',
                 'color' => 'danger'
-                ]); 
+            ]);
         }
     }
-
 }
-

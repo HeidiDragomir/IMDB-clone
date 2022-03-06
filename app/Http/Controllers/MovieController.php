@@ -30,7 +30,7 @@ class MovieController extends Controller
             $categories = Movie::where('category_id', $movie->category_id)->inRandomOrder()->get();
             $lists = Mlist::where('user_id', Auth::user()->id)->orderBy('title', 'asc')->get();
 
-            if(!$lists->count()) {
+            if (!$lists->count()) {
                 $lists = false;
             }
 

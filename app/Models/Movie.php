@@ -16,17 +16,17 @@ class Movie extends Model
     {
         $query->when(
             $filters["search"] ?? false,
-            fn($query, $search) => $query->where(
-                fn($query) => $query
+            fn ($query, $search) => $query->where(
+                fn ($query) => $query
                     ->where("title", "like", "%" . $search . "%")
                     ->orWhere("body", "like", "%" . $search . "%")
             )
         );
         $query->when(
             $filters["category"] ?? false,
-            fn($query, $category) => $query->whereHas(
+            fn ($query, $category) => $query->whereHas(
                 "category",
-                fn($query) => $query->where("slug", $category)
+                fn ($query) => $query->where("slug", $category)
             )
         );
     }
@@ -46,11 +46,13 @@ class Movie extends Model
         return $this->hasMany(Watchlist::class);
     }
 
-    public function actors() {
+    public function actors()
+    {
         return $this->belongsToMany(Actor::class);
     }
 
-    public function mlists() {
+    public function mlists()
+    {
         return $this->belongsToMany(Mlist::class);
     }
 }

@@ -7,12 +7,14 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    
-    public function create() {
+
+    public function create()
+    {
         return view('register.register');
     }
 
-    public function store() {
+    public function store()
+    {
         // create the user
         $attributes = request()->validate([
             'name' => ['required', 'max:255'],
@@ -29,9 +31,8 @@ class RegisterController extends Controller
 
         /* session()->flash('success', 'Your account has been created.'); */
         return redirect('/')->with([
-                'success' => 'Your account has been created!',
-                'color' => 'primary'
-            ]);
+            'success' => 'Your account has been created!',
+            'color' => 'primary'
+        ]);
     }
 }
-
