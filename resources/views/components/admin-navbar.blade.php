@@ -5,10 +5,10 @@
             </div>
             
             <div class="d-flex" style="margin-bottom:5px;">
-                <p><a class="btn btn-light btn-outline-dark me-3 {{ request()->is('admin/dashboard/movies', 'admin/dashboard/movies/*') ? 'active' : '' }}" href="/admin/dashboard/movies">Movies</a></p>
-                <p><a class="btn btn-light btn-outline-dark me-3 {{ request()->is('admin/dashboard/actors', 'admin/dashboard/actors/*') ? 'active' : '' }}" href="/admin/dashboard/actors">Actors</a></p>
-                <p><a class="btn btn-light btn-outline-dark me-3 {{ request()->is('admin/dashboard/users', 'admin/dashboard/users/*') ? 'active' : '' }}" href="/admin/dashboard/users">Users</a></p>
-                <p><a class="btn btn-light btn-outline-dark me-3 {{ request()->is('admin/dashboard/comments') ? 'active' : '' }}" href="/admin/dashboard/comments">Comments</a></p>
+                <p><a class="btn btn-light btn-outline-dark me-2 {{ request()->is('admin/dashboard/movies', 'admin/dashboard/movies/*') ? 'active' : '' }}" href="/admin/dashboard/movies">Movies</a></p>
+                <p><a class="btn btn-light btn-outline-dark me-2 {{ request()->is('admin/dashboard/actors', 'admin/dashboard/actors/*') ? 'active' : '' }}" href="/admin/dashboard/actors">Actors</a></p>
+                <p><a class="btn btn-light btn-outline-dark me-2 {{ request()->is('admin/dashboard/users', 'admin/dashboard/users/*') ? 'active' : '' }}" href="/admin/dashboard/users">Users</a></p>
+                <p><a class="btn btn-light btn-outline-dark me-2 {{ request()->is('admin/dashboard/comments') ? 'active' : '' }}" href="/admin/dashboard/comments">Comments</a></p>
             </div>
         </div>
     </div>
