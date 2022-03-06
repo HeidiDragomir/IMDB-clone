@@ -43,7 +43,7 @@
         <h2 class="text-dark pt-5" style="width: 100%; border-bottom: 1px solid rgb(214, 214, 214); line-height: 0.1em; margin: 10px 0px 30px;">
             <span style="background: rgb(255, 255, 255); padding-right: 14px;">No created lists</span>
         </h2>
-        <p class="text-center mt-5">Go to settings to create new lists.</p>
+        <p class="text-center mt-5">Go to <a class="link-dark"href="/lists/settings">settings</a> to create new lists.</p>
     </div>
     @endif
 
