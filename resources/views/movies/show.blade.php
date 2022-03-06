@@ -34,7 +34,7 @@
                         @endif
 
 
-                        @if($lists->count())
+                        @if($lists)
                         <div class="dropdown">
                             <button class="btn btn-light d-flex align-items-center dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 <ion-icon name="add-outline" class="me-2"></ion-icon> Add to List
