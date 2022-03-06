@@ -34,6 +34,10 @@ class MovieController extends Controller
                 $lists = false;
             }
 
+            if (!$watchlist->count()) {
+                $watchlist=false;
+            }
+
             return view('movies.show', [
                 'movie' => $movie,
                 'watchlist' => $watchlist,
@@ -45,7 +49,7 @@ class MovieController extends Controller
 
             return view('movies.show', [
                 'movie' => $movie,
-                'watchlist' => $watchlist,
+                'watchlist' => false,
                 'lists' => false,
                 'categories' => $categories
             ]);
