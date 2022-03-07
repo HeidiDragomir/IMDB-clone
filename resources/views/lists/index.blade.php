@@ -16,7 +16,7 @@
                 <a class="text-decoration-none" href="/movies/{{ $movie->slug }}">
                     <div class="fade-in">
                         <img src="{{ $movie->photo_poster }}" class="img-fluid rounded" alt="{{ $movie->title }}">
-                        <h5 class="my-2 pb-3 link-dark">{{ $movie->title }} {{ $movie->id }}</p>
+                        <h5 class="my-2 pb-3 link-dark">{{ $movie->title }}</p>
                             <small class="text-muted position-absolute bottom-0 start-0 ms-3">{{ $movie->pivot->created_at->diffForHumans() }}</small>
                             <form class="position-absolute top-0 end-0 me-3 mt-1" method="POST" action="/lists/delete">
                                 @csrf
